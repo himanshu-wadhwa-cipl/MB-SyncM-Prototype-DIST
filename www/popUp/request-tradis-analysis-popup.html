@@ -1,0 +1,123 @@
+<script type="text/javascript">
+jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+	//alert('scfv');
+	jQuery('body').css({'overflow' :'auto'});
+});
+jQuery(window).on("resize", function(){
+jQuery.fn.colorbox.resize({       
+	width: "100%"
+	});
+});
+$( document ).ready(function() {
+    
+    //PopUp Close event fire
+        $('.closeTicket').click(function(){
+            $.colorbox({width:"100%", height:"auto",  href:"popUp/request-submited-popUp.html"});
+        });
+	
+$('.custom-upload input[type=file]').change(function(){
+    $(this).next().text($(this).val());
+});	
+	
+$('.request-tradis-allrooms select').each(function () {
+	
+		
+			// Cache the number of options
+			var $this = $(this),
+				numberOfOptions = $(this).children('option').length;
+		
+			// Hides the select element
+			$this.addClass('s-hidden');
+		
+			// Wrap the select element in a div
+			$this.wrap('<div class="select"></div>');
+		
+			// Insert a styled div to sit over the top of the hidden select element
+			$this.after('<div class="styledSelect"></div>');
+		
+			// Cache the styled div
+			var $styledSelect = $this.next('div.styledSelect');
+		
+			// Show the first select option in the styled div
+			$styledSelect.text($this.children('option').eq(0).text());
+		
+			// Insert an unordered list after the styled div and also cache the list
+			var $list = $('<ul />', {
+				'class': 'options'
+			}).insertAfter($styledSelect);
+		
+			// Insert a list item into the unordered list for each select option
+			for (var i = 0; i < numberOfOptions; i++) {
+				$('<li />', {
+					text: $this.children('option').eq(i).text(),
+					rel: $this.children('option').eq(i).val()
+				}).appendTo($list);
+			}
+		
+			// Cache the list items
+			var $listItems = $list.children('li');
+		
+			// Show the unordered list when the styled div is clicked (also hides it if the div is clicked again)
+			$styledSelect.click(function (e) {
+				e.stopPropagation();
+				$('div.styledSelect.active').each(function () {
+					$(this).removeClass('active').next('ul.options').hide();
+				});
+				$(this).toggleClass('active').next('ul.options').toggle();
+			});
+		
+			// Hides the unordered list when a list item is clicked and updates the styled div to show the selected list item
+			// Updates the select element to have the value of the equivalent option
+			$listItems.click(function (e) {
+				e.stopPropagation();
+				$styledSelect.text($(this).text()).removeClass('active');
+				$this.val($(this).attr('rel'));
+				$list.hide();
+				/* alert($this.val()); Uncomment this for demonstration! */
+			});
+		
+			// Hides the unordered list when clicking outside of it
+			$(document).click(function () {
+				$styledSelect.removeClass('active');
+				$list.hide();
+			});
+		
+			});
+
+});
+	
+</script>
+
+<div class="request-popup row">
+  <div class="request-tradis-analysis pull-left">
+    <h3>Request a<br />
+      <span>TARDIS</span> analysis</h3>
+    <p>Once submitted, a representative from MartinBrower will reach out to you with questions and/or a schedule for the analysis.Keep an eye on your Message Cenrer</p>
+  </div>
+  <div class="request-tradis-allrooms pull-left">
+    <div class="row custom-select">
+      <select>
+        <option>All Rooms</option>
+        <option>All Rooms</option>
+      </select>
+    </div>
+    <div class="row">
+     <div class="textArea">
+      <textarea class="form-control" rows="3" placeholder="Give  us some information to help explain why you are in need of an analysis"></textarea>
+      </div>
+      <div class="pull-left">
+        <div class="row img-upload">
+          <div class="custom-upload">
+            <input type="file">
+            <div class="fake-file">
+             Image Upload
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a href="javascript:;" onclick="$('#cboxClose')" class="btn-primary btn-medium closeTicket pull-left">SUBMIT Request</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

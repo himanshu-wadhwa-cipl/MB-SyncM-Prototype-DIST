@@ -1,0 +1,165 @@
+<link rel="stylesheet" type="text/css" href="css/cal_styles.css"/>
+<script type="text/javascript" charset="utf-8" src="js/prototype.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/timeframe.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+  new Timeframe('calendars', {
+	startField: 'start',
+	endField: 'end'
+	});
+	
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+
+</script>
+
+
+<!-- Calendar Files -->
+<script type="text/javascript">
+
+		jQuery.noConflict();
+		
+        jQuery(document).ready(function() {
+            
+			jQuery("#eventbox .dropdown dt a").click(function() {
+                jQuery("#eventbox .dropdown dd ul").toggle();
+            });
+                        
+            jQuery("#eventbox .dropdown dd ul li a").click(function() {
+                var text2 = jQuery(this).html();
+                jQuery("#eventbox .dropdown dt a span").html(text2);
+                jQuery(".dropdown dd ul").hide();
+				jQuery("#result").html(text2);
+				
+				
+                jQuery("#result").html(getSelectedValue("event"));
+            });
+                        
+            
+
+            jQuery(document).bind('click', function(e) {
+                var jQueryclicked = jQuery(e.target);
+                if (! jQueryclicked.parents().hasClass("dropdown"))
+                    jQuery(".dropdown dd ul").hide();
+            });
+			
+			
+			
+			//Cal
+			
+			jQuery("#cal .dropdown dt a").click(function() {
+                jQuery("#cal .dropdown dd ul").toggle();
+            });
+                        
+            jQuery("#cal .dropdown dd ul li a").click(function() {
+                var text1 = jQuery(this).html();
+                jQuery("#cal .dropdown dt a span").html(text1);
+                jQuery("#cal .dropdown dd ul").hide();
+				
+            });
+       
+           	jQuery('#sb_close').click(function(){
+			   	//jQuery('#cboxOverlay, #colorbox').hide('slow');
+				jQuery.colorbox.close()	
+			   });
+			   
+			jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+				//alert('scfv');
+				jQuery('body').css({'overflow' :'auto'});
+			});
+			
+			
+			
+			//Datepicker tooltip
+			jQuery('.ui-datepicker-calendar a.ui-state-default').wrap('<div class="tooltip_wrap" />');
+				
+			jQuery('#calendars_container').append('<div class="dayinfo"></div>');	
+			jQuery('.dayinfo').hide();			
+			
+            
+                
+               
+                jQuery("#calendars_calendar_0 td.today").hover(function() {
+                    var pos = jQuery("#calendars_calendar_0 td.today").position();
+                     jQuery('.dayinfo').show()
+                     jQuery('.dayinfo').css('left', pos.left+20 )
+            });
+			
+            jQuery(".dayinfo").click(function() {
+                     jQuery(this).hide(); 
+                      }); 
+
+        });
+    </script>
+<div class="event_popup" style="overflow:hidden;">
+		<div class="calender_box fl">
+        	<h2>Add an Event</h2>
+            <!-- New Calendar Divs -->
+            <div class="custom_date">
+            <div class="cal_popSection" id="cal">
+            	<dl  class="dropdown">
+                        <dt><a href="javascript:void(0);"><span>2014</span></a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="javascript:void(0);">2014</a></li>
+                                <li><a href="javascript:void(0);">2013</a></li>
+                                <li><a href="javascript:void(0);">2012</a></li>
+                                <li><a href="javascript:void(0);">2011</a></li>
+                                 <li><a href="javascript:void(0);">2010</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+               
+             </div>  <!--cutom_date end-->
+            	<a class="timeframe_button previous btn_cal_prev" href="#" onclick="return false;"></a>
+            	<div id="calendars"></div>
+                <a class="timeframe_button next btn_cal_next" href="#" onclick="return false;"></a>
+            </div>
+            <!-- New Calendar Divs -->
+            <span class="blue_text">simply click and drag the dates you want to alter</span>   
+            
+           </div>
+           <div class="calender_form fr">           		
+              	<div class="e_info">
+                	<!--<h3>Dates</h3>-->
+                    <span class="date-text" style="width:138px; display:inline-block;">Start Date</span> <span class="date-text">End Date</span><br />
+                    <input type="text" id="start" class="date_display timeframe_field start" placeholder="Start Date" disabled >-
+                    <input type="text" id="end" class="date_display timeframe_field end" placeholder="End Date" disabled>
+                    <span class="small">use the calender to the left</span><br>
+                    <label class="chkBox"><input type="checkbox" />Recurring</label>
+                </div><!--e_info end-->
+                
+                <div class="e_info" id="eventbox">
+                                
+                     <dl id="event" class="dropdown">
+                        <dt><a href="javascript:void(0);"><span>Event Type</span></a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="javascript:void(0);"><img src="images/promotion-icon.png" class="fl" /> Local Event</a></li>
+                                <li><a href="javascript:void(0);"> <img src="images/promotion-icon.png" class="fl" /> Local Promotion</a></li>
+                                <li><a href="javascript:void(0);"> <img src="images/promotion-icon.png" class="fl"  /> National Event</a></li>
+                                 <li><a href="javascript:void(0);"> <img src="images/promotion-icon.png" class="fl" /> National Promotion</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <span id="result"><img src="images/promotion-icon.png" class="fl" /> National Promotion</span>
+                </div><!--e_info end-->
+                <div class="e_info">
+                	<textarea class="b_box" placeholder="Use this area to describe the event you wish to add to the calender, so that we may better adjust your order proposal for a more accurate delivery. Examples: Football Match in your area Chiller is being repaired Road closure in front of your restaurant Competitor store opening next door"></textarea>
+                </div><!--e_info end-->
+                <div class="e_info">
+                	<span class="fl blue_text"><a href="javascript:void(0);" title="Unsure if the event is relevant? Ask your planner" >Unsure if the event is relevant? Ask your planner</a></span>
+                	<span class="fr"><button class="btn blueBtn" id="sb_close">Submit Event to be Added</button></span>
+                </div><!--e_info end-->
+                
+           </div><!--calender_form end-->
+            
+</div><!--event_popup end-->
+
+<script type="text/javascript">
+   
+
+</script>

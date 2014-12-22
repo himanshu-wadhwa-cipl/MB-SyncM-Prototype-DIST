@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* common css */
+.width100{width:100% !important;}
+.width85{width:85% !important;}
+.width75{width:75% !important;}
+.width65{width:65% !important;}
+.width50{width:50% !important;}
+.width45{width:45% !important;}
+.width35{width:35% !important;}
+.width25{width:25% !important;}
+
+/* common css end*/
+/* Css for mobile and tablet*/
+@media (max-width: 640px) {
+	
+}
+@media (max-width: 767px) {
+	.img-responsive{display:inline-block; *display: inline; zoom: 1;}
+	.orderListingTop li{width:49%; margin-bottom:10px;}
+	.change_icon{top:600px}
+	.desktopWrapper{display:none !important}
+	.mobBodyWrapper{display:block !important; width:100%; float:left}
+}
+@media (max-width: 768px) {
+	.home .horizontal-only{width:1550px;}
+	 .messageSlider-Content{left:25px;}
+	 .messageSlider-left, .messageSlider-right{min-height:460px;}
+.calendar-month-view .promo-events li{line-height:12px; margin-bottom:5px; padding-top:5px;}
+	.calendar-week-weatherL, .calendar-week-promo-national, .calendar-week-promo-local, .calendar-week-event-local, .calendar-ops-supply-close{min-height:150px;}
+.order-status-map{width:65%;}
+.line2{left:16%; transform: rotate(30deg);  -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg);}
+.line3{transform: rotate(12deg);  -ms-transform: rotate(12deg); -webkit-transform: rotate(12deg); left:11%;}
+.line4{transform: rotate(30deg);  -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); left:6%;}
+.line5{top:238px; width:136px;}
+.track-order-arrives .icon-order-disabled:before{left:-58px;}	
+.track-order-arrives{top:252px;}
+.track-order-delivered{top:253px;}
+.track-order-delivered .icon-order-disabled:before{top:-101px;}
+.track-order-dispatched{left:35%;}
+.tradis-resources h3{height:84px;}
+.tradis-resources p{min-height:240px;}
+    
+}
+/* Css for mobile end*/
+
+/* Css for tablet*/
+@media (max-width: 900px) {
+	.r_flag_form{top:-200px}
+	.order-transit .r_flag_form{top:-130px}
+	.orderIntransit .r_flag_form{top:-160px}
+	.howWeDo .headerWrapper h1{font-size:30px;}
+	.howWeDo .headerleft-howWeDo{padding-top:54px !important;}
+	.howWeDo .headerleft-howWeDo > span{ margin-bottom:28px !important;}
+	.howWeDo .headerleft-howWeDo-fixed > span{margin-bottom:20px !important;}
+	.howWeDo .header-profile .profile-detail h3{font-size:20px;}
+	.saveMoney li{margin-bottom:10px;}
+    .non-conformance > li{min-width: 330px; margin-bottom: 5px;}
+    .order-view-Status li > p{line-height: 11px;}
+}
+
+@media (min-width:768px) and (max-width: 980px){
+	.orderListingTop li{padding-left:7px;}
+	.footer-fixed-large{width:58%!important;}
+	.calender_form{width:41.576%;}
+	.calender_box{width:57.819%;}
+    .request-tradis-allrooms .form-control{width:200px;}
+}
+
+@media (max-width:1024px){
+    .messageSec >.container{overflow: hidden;} 
+    .veiwLink{padding-bottom: 40px;}
+    .analysis-status-Top .order-view-Status li > .btnCancel{bottom: 23px}
+    .nonConformance .scroll-panes{margin-bottom:110px;}
+	.non-conformance, .ticketList-wrapper .horizontal-only,.frontView{width:1024px; margin-bottom:0;}
+    .nonConformance .ticketList-wrapper .horizontal-only{padding-top: 10px;}
+ .planDownload{margin-bottom: 20px}
+    .financial-detail .tabs li a{font-size: 29px !important; padding: 20px 15px}
+    .financial-table table td .download, .financial-popup .download:first-child{margin-bottom:10px;}
+.financial-table table td .download, .financial-popup .download{width:32px; height:32px; line-height:32px;}
+.veiwLink{padding-bottom: 40px;}
+.ticketList-wrapper .orderView, .ticketList{padding:0;}
+.ticketList-wrapper .order-view-Status li:last-child hr{max-width:223px;}
+.financial-detail{background-size:auto;}
+.footer-fixed-large{width:69%;}
+}
+
+@media (max-width: 980px) {
+	.footer-panel{margin-left:30px;}
+	.ops-supplyleft{display:block; width:100%; text-align:center;}
+	.ops-supplyleft{padding-bottom:10px;}
+	.orderStatus-Wrapper .order-dateSection,.orderStatus-Wrapper .order-status-detail,.orderWrapper{padding-left:0;}
+	.orderStatus-Wrapper .order-status-detail{margin-top:20px;}
+	.orderWrapper .orderTable{max-width:725px;}
+	.tableHeading{max-width:720px;}
+	.parallaxNav{text-align:left;}
+	.parallaxNav li a{font-size:13px;}
+	.order-StatusSection, .order-status-detail{vertical-align:top!important; margin-top:0!important;}
+	.order-status-detail:before{border:none}
+	.order-dateSection{margin-bottom:20px}
+	.aggregateWrapper .messageView{width:54.0625%;}
+	.aggregateWrapper .aggregate-right{width:37.5174%;}
+	.footer-panel{width: 100%; display: block; float: left !important; margin-bottom: 10px;}
+    .frontView li .frontViewContent{padding: 0 10px;}
+    
+    /** Pop Up **/
+    .popUp-darkBlue{padding: 25px}
+    
+    .popUp-darkBlue .horizontal-only{width: 100%;}
+    .non-conformance-ticket td{padding-right: 20px;}
+    
+}
+@media (min-width: 980px) and (max-width:1152px) {
+	.ops-supplyleft{padding-top:45px;}
+    .footer-panel{width: 53%;}
+    .checkboxWrapper,.double-selectBotm{width: 100%; float: left;}
+	.btnSubmitCollection{clear: both; float: left !important; margin-top: 10px;}
+}
+/* Css for tablet end*/
+@media (max-width: 1080px) {
+    
+}
+@media (max-width: 1130px) {
+	.myTeamList{margin-bottom:30px;}
+	.messageSlider-Content{font-size:15px;}
+	.messageSlider-Content .largeText{font-size:52px; line-height:55px;}
+	.messageSlider-Content .smallText{font-size:13px; line-height:15px;}
+    .non-conformance > li:nth-child(2n) > div .date-time .date{margin-right: 5px; padding-right: 5px;}
+    .non-conformance > li > div{padding-left: 10px; padding-right: 10px;}
+    .popUp-darkBlue .orderView .panel-large{max-width: 1120px; width: 100%;}
+}
+
+@media only screen and (min-width : 768px) and (max-width :1145px)  { 
+.latestOrder .orderListCarousel:after{display:none;}
+}
+@media (min-width: 1152px) {
+.jspHorizontalBar { display: none !important; }
+}
+@media (max-width: 1152px) {
+	.container{padding:0 10px}
+	.productContainer{padding:0 10px;}
+	.productListing{text-align:center;}
+	.orderNavigation li.active{width:100%; display:block; margin-bottom:10px;}
+	.icon-info:before{left:57px !important;}
+    .footer-panel{margin-left: 10px;}
+    .non-conformance > li > div .custom-select .styledSelect:after{right: -35px;}
+    .non-conformance > li:last-child > div .custom-select .styledSelect:after{right: -15px;}
+    .non-conformance > li:nth-child(2n) > div .date-time .date .select{width: 145px;}
+    .non-conformance > li:nth-child(2n) > div .custom-select .select{font-size: 15px;}
+    .financial-detail .tabs li a{font-size: 35px}
+}
+@media (max-width: 1225px) {
+	#calendarcontent{padding:0 30px; overflow:hidden;}
+	#calendarcontent .bx-controls-direction .bx-prev{left:5px;}
+	#calendarcontent .bx-controls-direction .bx-next{right:5px;}
+}

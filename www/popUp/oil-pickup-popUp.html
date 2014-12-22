@@ -1,0 +1,133 @@
+<script type="text/javascript">
+
+
+$(document).ready(function(e) {
+	
+	
+	
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+	jQuery('body').css({'overflow' :'auto'});
+});
+jQuery(window).on("resize", function(){
+jQuery.fn.colorbox.resize({       
+	width: "700px",
+	
+	});
+	
+	
+	
+});
+	
+	$('.oilpickup select').each(function () {
+			// Cache the number of options
+			var $this = $(this),
+				numberOfOptions = $(this).children('option').length;
+		
+			// Hides the select element
+			$this.addClass('s-hidden');
+		
+			// Wrap the select element in a div
+			$this.wrap('<div class="select"></div>');
+		
+			// Insert a styled div to sit over the top of the hidden select element
+			$this.after('<div class="styledSelect"></div>');
+		
+			// Cache the styled div
+			var $styledSelect = $this.next('div.styledSelect');
+		
+			// Show the first select option in the styled div
+			$styledSelect.text($this.children('option').eq(0).text());
+		
+			// Insert an unordered list after the styled div and also cache the list
+			var $list = $('<ul />', {
+				'class': 'options'
+			}).insertAfter($styledSelect);
+		
+			// Insert a list item into the unordered list for each select option
+			for (var i = 0; i < numberOfOptions; i++) {
+				$('<li />', {
+					text: $this.children('option').eq(i).text(),
+					rel: $this.children('option').eq(i).val()
+				}).appendTo($list);
+			}
+		
+			// Cache the list items
+			var $listItems = $list.children('li');
+		
+			// Show the unordered list when the styled div is clicked (also hides it if the div is clicked again)
+			$styledSelect.click(function (e) {
+				e.stopPropagation();
+				$('div.styledSelect.active').each(function () {
+					$(this).removeClass('active').next('ul.options').hide();
+				});
+				$(this).toggleClass('active').next('ul.options').toggle();
+			});
+		
+			// Hides the unordered list when a list item is clicked and updates the styled div to show the selected list item
+			// Updates the select element to have the value of the equivalent option
+			$listItems.click(function (e) {
+				e.stopPropagation();
+				$styledSelect.text($(this).text()).removeClass('active');
+				$this.val($(this).attr('rel'));
+				$list.hide();
+				/* alert($this.val()); Uncomment this for demonstration! */
+			});
+		
+			// Hides the unordered list when clicking outside of it
+			$(document).click(function () {
+				$styledSelect.removeClass('active');
+				$list.hide();
+			});
+		
+			});
+	
+
+
+
+
+    
+});	
+</script>
+<script>  
+$(document).ready(function(e) {
+   var today = new Date();
+	var y = today.getFullYear();
+	var date = new Date();
+	$('#full-year').multiDatesPicker({
+	addDates: ['12/14/'+y, '12/25/'+y, '12/12/'+y],
+	numberOfMonths: [1,2],
+	addDisabledDates: [date.setDate(10), date.setDate(15),date.setDate(16), date.setDate(17),date.setDate(18), date.setDate(20),date.setDate(22), date.setDate(23),date.setDate(24),date.setDate(28), date.setDate(29)]
+
+	});
+
+	$('.ui-state-default').on('click',function(){
+		$(this).parent('td').css({
+			background:'#000'
+		});
+		console.log($(this).parent('td'));
+	});
+	
+});
+
+           
+	
+</script>
+
+<div class="oilpickup row" >
+  <div class="row">
+    <h1 class="semiBold fnt-30">Oil Pickup</h1>
+    <div class="row custom-month-select">
+      <select>
+        <option>2014</option>
+        <option>2015</option>
+        <option>2016</option>
+        <option>2017</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div id="full-year" class="box"></div>
+  </div>
+  <div class="row date-status fnt-11"><span class="already-scheduled"><i></i>Already scheduled</span> <span class="available-dates"><i></i>Already pickup dates</span></div>
+  <div class="row"><a href="javascript:void(0);" class="btn-blue btn-radius10 fnt-20 semiBold  disIn-Block pull-right btn">Schedule Collection</a><a href="javascript:void(0);" class="btn-grey btn-radius10  fnt-20 semiBold  disIn-Block pull-right mrgRight25 btn">Cancel</a></div>
+</div>

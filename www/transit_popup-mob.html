@@ -1,0 +1,47 @@
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script>
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+		//alert('scfv');
+		jQuery('body').css({'overflow' :'auto'});
+	});
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+</script>
+
+<div class="popUp event_popucp text-left">
+	<div class="heading">
+		<small>Order:</small><br>
+        <span class="semiBold">7281170</span>
+	</div>
+    <div class="popUpContent">
+    	<h2>Today 07.08.14</h2>
+        <p>Status: Order in transit<br>
+        	Expected delivery: <span class="semiBold">14:36pm</span>
+        </p>
+    </div>
+    <div class="orderInTransit">
+    	<p class="transitImg"><i class="icon-order-checked pull-left">icon-order-checked</i><i class="icon-order-disabled pull-right">icon-order-disabled</i></p>
+        <ul>
+        	<li>
+            	Order<br>
+				<span class="semiBold">in transit</span>
+				<span class="time">10:15</span>
+				<span class="date">07.08.14</span>
+            </li>
+        	<li>
+            	Order<br>
+				<span class="semiBold">in transit</span>
+				<small>expected arrival</small>
+				<span class="day semiBold">today</span>
+				<span class="todayDate semiBold">14.36</span>
+            </li>
+        	<li class="disabled">
+            	Order<br>
+				<span class="semiBold">in transit</span>
+            </li>
+        </ul>
+    </div>
+</div>
