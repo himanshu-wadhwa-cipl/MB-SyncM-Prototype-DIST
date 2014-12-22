@@ -30,18 +30,22 @@
 .calendar-month-view .promo-events li{line-height:12px; margin-bottom:5px; padding-top:5px;}
 	.calendar-week-weatherL, .calendar-week-promo-national, .calendar-week-promo-local, .calendar-week-event-local, .calendar-ops-supply-close{min-height:150px;}
 .order-status-map{width:65%;}
-.line2{left:16%; transform: rotate(30deg);  -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg);}
-.line3{transform: rotate(12deg);  -ms-transform: rotate(12deg); -webkit-transform: rotate(12deg); left:11%;}
-.line4{transform: rotate(30deg);  -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); left:6%;}
-.line5{top:238px; width:136px;}
+.line{top:-164px; left:28%; transform: rotate(34deg);  -ms-transform: rotate(34deg); -webkit-transform: rotate(34deg);}
+.line2{transform: rotate(22deg);  -ms-transform: rotate(22deg); -webkit-transform: rotate(22deg); left:22%;}
+.line3{transform: rotate(32deg);  -ms-transform: rotate(32deg); -webkit-transform: rotate(32deg); left:18.5%;}
+.line4{transform: rotate(30deg);  -ms-transform: rotate(30deg); -webkit-transform: rotate(30deg); left:12%;}
+.line5{top:98px; width:136px;}
 .track-order-arrives .icon-order-disabled:before{left:-58px;}	
-.track-order-arrives{top:252px;}
-.track-order-delivered{top:253px;}
+.track-order-arrives{top:112px;}
+.track-order-delivered{top:113px;}
 .track-order-delivered .icon-order-disabled:before{top:-101px;}
 .track-order-dispatched{left:35%;}
 .tradis-resources h3{height:84px;}
 .tradis-resources p{min-height:240px;}
-    
+.track-order-picked{left:24%; top:32px;}
+.track-order-closed{left:20%;}  
+.track-order-proposed{left:13%;}
+.track-order-loaded{left:28%; top:-50px;} 
 }
 /* Css for mobile end*/
 
@@ -86,6 +90,7 @@
 .footer-fixed-large{width:69%;}
 .track-order-delivered{right:20px;}
 .track-order-arrives{right:20%;} 
+.line5{right:112px;}
 }
 
 @media (max-width: 980px) {

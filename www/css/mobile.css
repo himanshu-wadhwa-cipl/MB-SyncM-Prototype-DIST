@@ -13,26 +13,28 @@
 .mbpaddingTop76{padding-top:76px !important;}
 .mrg-btm-10Mb{margin-bottom:-10px;}
 .mrg-btm-5Mb{margin-bottom:-5px;}
-.home .mobBodyWrapper.nightBg{background-position: 28% 73% !important; background:url(../images/mb-bg.png) no-repeat center top; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover; float:left; width:100%;}
+.home .mobBodyWrapper.nightBg{background-position: 28% 73% !important; background:url(../images/homeDaybg.jpg) no-repeat center top; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; background-size: cover; float:left; width:100%;}
 .home .mobBodyWrapper.dayBg{background-position: 55% 0 !important;}
 .mobBodyWrapper .messageAlert-Wrapper .messageAlert{padding:0 8px;}
 .mobBodyWrapper .messageSlider{display:inline-block; }
-.mobBodyWrapper .messageSlider-left{background:#fff url(../images/mob/message-slider-off-mb.png) no-repeat scroll left 40px; width:100%; min-height:400px;}
+.mobBodyWrapper .messageSlider-left{background:#fff url(../images/mob/message-slider-off-mb.png) no-repeat scroll left 40px; width:100%; min-height:560px;}
 .mobBodyWrapper .messageSlider-Content .largeText{font-size:36px; line-height:37px}
 .mobBodyWrapper .messageSlider-Content-panel div{font-size:13px;}
 .mobBodyWrapper .messageSlider-Content .mediumText{line-height:24px;}
 .mobBodyWrapper .messageSlider-Content .mediumText div{font-size:24px;}
+.mobBodyWrapper .messageSlider-Content .toy-allocation div:last-child{font-size:22px; line-height:20px;}
+.mobBodyWrapper .messageSlider-Content .proposal+p{border:0!important;}
 .mobBodyWrapper .messageSlider-Content .smallText{font-size:11px;}
 .mobBodyWrapper .messageSlider-Content{left:95px; top:20%; width:80%}
 .mobBodyWrapper .messageSlider-Content .deliveredProcessed{min-width:360px; width:100%; margin-bottom:45px;}
-.mobBodyWrapper .messageSlider-Content .stockRecountDiv{width:49%; min-width:170px; max-width:220px;}
+.mobBodyWrapper .messageSlider-Content .stockRecountDiv{width:49%; min-width:200px; max-width:220px;}
 .mobBodyWrapper .messageSlider-Content .order-proposed > li{font-size:13px;}
 .mobBodyWrapper .messageSlider-Content .solutionDiv{width:240px; padding:0 8px;}
 .mobBodyWrapper .messageSlider-Content .solutionDiv > div{padding-left:10px;}
 .mobBodyWrapper .messageSlider-Content .solutionDiv > p{ border-left:2px solid #d9d9d9; padding-left:10px; padding-bottom:10px;}
 
 /*.mobBodyWrapper .messageVeiwMb{margin-bottom:135px;}*/
-.messageVeiwMb .orderListingTop{padding:8px 0 18px 5px; background-color: rgba(48,48,48, 0.7);}
+.messageVeiwMb .orderListingTop{padding:8px 15px 18px; background-color: rgba(48,48,48, 0.7);}
 .messageVeiwMb .orderListingTop li{display:block; width:100%; max-width:none; padding:0; border:none;}
 .messageVeiwMb .orderListingTop li .textMedium{font-size:21px;}
 .messageVeiwMb .orderListingTop li .textSmall{font-size:17px;}
@@ -41,7 +43,7 @@
 .mobBodyWrapper .event-panel{width:100%; color:#fff;}
 .mobBodyWrapper .event-panel .row-top,.mobBodyWrapper  .event-panel .row-bottom{padding:8px 0 5px 5px; min-height:130px}
 .mobBodyWrapper .event-panel .row-top{background-color:rgba(20,25,33,0.7);}
-.mobBodyWrapper .event-panel .row-bottom{background-color:rgba(72,88,128,0.7);}
+.mobBodyWrapper .event-panel .row-bottom{background-color:rgba(72,88,128,0.8);}
 .mobBodyWrapper .event-panel .row-top .date > span{font-size:16px;}
 .mobBodyWrapper .event-panel .row-top .icon-temp{font-size:12px; padding-left:40px; margin-bottom:10px; display:block;}
 .mobBodyWrapper .event-panel .today-date{font-size:29px; font-family:'proxima_novasemibold';}
@@ -53,12 +55,18 @@
 .mobBodyWrapper .event-panel .event{font-size:11px; line-height:17px; padding-right:15px; color:#fff;}
 .mobBodyWrapper .icon-addEvent:before{background-position:-52px -665px; width:40px; height:40px; top:-10px !important}
 .mobBodyWrapper .mMenu{background:url(../images/icon-sprit.png) no-repeat scroll -43px -706px; width:50px; height:38px; display:block; text-indent:-9999px; font-size:0; position:fixed; top:10px; left:0px; z-index:101; margin-top:-10px;}
+.mobBodyWrapper .message-center{background:url(../images/icon-sprit.png) no-repeat scroll -53px -1228px; width:26px; height:20px; display:block; position:absolute; top:10px; right:10px; z-index:101; text-align:center;}
+.mobBodyWrapper .message-center span{border-radius:50%; background:#ff989a; display:inline-block; line-height:20px; padding:0 3px; min-width:20px;}
+
 /********** Hood ************/
 .mobBodyOpacity{display:none; width:100%; height:100%; background-color:#000; opacity:0.7; position:fixed; top:38px; left:0; min-width:310px; z-index:2}
-nav.mobNavigation{width:100%; display:block; max-width:290px; height:100%; background-color:#4b4b4b; position:absolute; top:38px; left:-605px; padding-bottom:40px; z-index:3; min-height: 400px; overflow: auto;}
-
+nav.mobNavigation{width:100%; display:block; max-width:290px; height:100%; background-color:#4b4b4b; position:fixed; top:38px; left:-605px; padding-bottom:40px; z-index:3; height:100%; overflow: auto; bottom:0;}
+.home nav.mobNavigation{top:76px;}
+.mobNavigation-scroll{height:240px; overflow:scroll;}
+nav.mobNavigation .custom-select .styledSelect{padding:0;} 
 .mob-Body{position:relative; display:block; width:100%; float:left;}
-nav.mobNavigation header{background-color:#39445c; height:150px; width:100%; font-size:17px; line-height:39px; color:#536278; padding:8px; }
+nav.mobNavigation header{background-color:#1d2b51; height:130px; width:100%; font-size:17px; color:#536278; padding:8px; }
+nav.mobNavigation header .text-right>p:first-child{height:24px;}
 .menuClose{display:block; width:38px; height:43px; float:right; margin-bottom:20px;}
 .icon-mob-close:before{background-position:-40px -763px; width:39px; height:43px; top:-5px; left:-3px !important;}
 nav.mobNavigation .mobHood,nav.mobNavigation .mob-letsTack{display:block; width:100%; background-color:#4b4b4b; padding-left:8px;}
@@ -66,10 +74,11 @@ nav.mobNavigation footer,nav.mobNavigation .mobHood li,nav.mobNavigation .mobHoo
 nav.mobNavigation .mobHood li a{color:#b6b6b6; font-size:28px; line-height:50px; font-family:'proxima_novasemibold';}
 nav.mobNavigation .mob-letsTack{border-top:1px solid #000; border-bottom:1px solid #000; padding:1px 0;}
 nav.mobNavigation .mob-letsTack > a{color:#b6b6b6; font-size:17px; line-height:20px; border-top:1px solid #7f7f7f; border-bottom:1px solid #7f7f7f; width:100%; display:block; padding:18px 0 18px 8px; color:#fff;}
-nav.mobNavigation footer{background-color:#4b4b4b; position:fixed; bottom:0; max-width:290px;}
-nav.mobNavigation footer p{margin-left:105px; color:#fff; font-size:11px; margin-bottom:4px;}
-nav.mobNavigation .footer-fixed-small{width:100%; max-width:none; background-color:#FFF; height:25px; position:relative;}
-nav.mobNavigation .footer-fixed-small > img{position:absolute; left:12px; top:-20px;}
+nav.mobNavigation footer{background-color:#1d2b51; position:fixed; bottom:0; max-width:290px;}
+nav.mobNavigation footer .blue-text{color:#087dd4;}
+nav.mobNavigation footer p{margin:2px 0 4px 130px; color:#fff; font-size:11px;}
+nav.mobNavigation .footer-fixed-small{width:100%; min-width:290px; background-color:#FFF; height:20px; position:relative;}
+nav.mobNavigation .footer-fixed-small > img{position:absolute; left:12px; top:-18px; width:110px;}
 nav.mobNavigation .footer-fixed-small .footer-fixed-text{margin-left:105px; padding:0}
 nav.mobNavigation .footer-fixed-small .footer-fixed-text h5{font-size:21px; line-height:25px}
 
@@ -140,16 +149,16 @@ nav.mobNavigation .footer-fixed-small .footer-fixed-text h5{font-size:21px; line
 .mobBodyWrapper .icon-arrowDown:before{top:50%; margin-top:-10px}
 
 /************ Mobile Heading *************/
-.mobBodyWrapper .messageHeading{background-color:#0099ff;}
+.mobBodyWrapper .messageHeading{background-color:#0099ff; text-align:center;}
 .home .mobBodyWrapper .messageHeading{background-color:#ff989a;}
-.mobBodyWrapper .mob-Heading,.messageAlert-Wrapper .messageAlert-mb{line-height:38px; padding:0 8px; font-size:14px; width:100%; display:block; text-align:center; height:38px}
+.mobBodyWrapper .mob-Heading,.messageAlert-Wrapper .messageAlert-mb{line-height:38px; padding:0 8px; font-size:14px; display:block; text-align:center; height:38px}
 .messageAlert-Wrapper .messageAlert-mb.text-left{padding-left:50px}
-.mobBodyWrapper .orderHeading .mob-Heading{color:#77c8ff; font-size:23px}
+.mobBodyWrapper .orderHeading .mob-Heading{color:#77c8ff; font-size:23px; display:inline-block;}
 .mobBodyWrapper .messageAlert_Area .bx-controls-direction .bx-next{right:5%}
 .mobBodyWrapper .textTrasform{display:none}
 
 /************ Select Box *************/
-.mobNavigation .custom-select .select{ border:none; min-width:80px; color:#5a687e; font-size:18px}
+.mobNavigation .custom-select .select{ border:none; min-width:80px; color:#5a687e; font-size:18px; height:24px; line-height:normal;}
     
 /****** Tradis CSS **********/
     .tradis .mob-Body{overflow-x: hidden;}
@@ -262,5 +271,4 @@ nav.mobNavigation .footer-fixed-small .footer-fixed-text h5{font-size:21px; line
 .collectionText{font-size: 12px; padding-top: 30px;}
 .profileDescMob .imgDescription h4{font-size: 14px;}
 
-	
 }
