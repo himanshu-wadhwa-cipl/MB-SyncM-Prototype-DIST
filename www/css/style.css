@@ -464,6 +464,7 @@ footer{display:block; width:100%;}
 .popUp { width:100%; min-height:620px; background:url(../images/order-status-large-icon.gif) 0 50% no-repeat; position:relative; }
 .popUp .heading{display:block; width:100%; color:#fff; font-size:11px; background-color:#12234f; padding:0 10px}
 .popUp .heading span{font-size:33px; line-height:30px}
+.popUp .heading span+span{ color:#6c7792; font-size:24px; border-left:#546080 solid 1px; margin-left:10px; padding-left:10px;}
 .popUp .popUpContent ul{margin:20px 0 15px 0; display:inline-block; clear:both;}
 .popUp .popUpContent li{border-bottom:#dbdee6 solid 1px; padding:2px 0;}
 .popUp .popUpContent li:last-child{border-bottom:0;}
@@ -492,7 +493,8 @@ footer{display:block; width:100%;}
 .track-order-closed .icon-order-checked { top:-86px; left:-56px; }
 .track-order-proposed .icon-order-checked { top:-92px; left:-52px; }
 .track-order-transit { right:10%; top:-140px; }
-.track-order-transit p { margin-bottom:5px; }
+.track-order-transit .blue-text{color:#0099ff;}
+.track-order-transit p { margin-bottom:5px; position:absolute; right:0; }
 .track-order-arrives, .track-order-delivered{color:#b4bac9;}
 .track-order-arrives {top:185px; right:18%; }
 .track-order-delivered {top:173px; right:0; }
