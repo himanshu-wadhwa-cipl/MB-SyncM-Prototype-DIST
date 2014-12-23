@@ -13,158 +13,164 @@
 <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" >
 <link rel="stylesheet" type="text/css" href="css/colorbox.css">
 <link rel="stylesheet" type="text/css" href="css/icheck.css" />
-
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css">
 <link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
 </head>
 <body class="aggregate">
-<div class="bodyWrapper body nightBg"> 
-  <!-- Change Icon -->
-  <div class="change_icon"> <a href="javascript:;" class="uploadBg h_page" title="Change View">sad</a></div>
-  <!-- Change Icon --> 
+<div class="bodyWrapper body dayBg"> 
+  
   <!-- Right Message Icon -->
   <div class="rightMessage_wrapper">
     <ul class="rightMessage">
       <li><a class="ajax100" href="add_event_popup.html"><i class="icon-addEvent-blue">Add Event</i><br>
         Add Event</a></li>
       <li><a href="transit_popup.html" class="trackIt ajax"><i class="icon-trackIt">Track IT</i><br>
-        <span class="fnt-11 clr-warning">15:21</span><br>
-        Track It</a></li>
-      <li><a href="#footerMyTeam" class="letTalk"><i class="icon-messageBox">Message</i><br>
-        Let's Talk</a></li>
+        <span class="fnt-11 clr-warning time">15:21</span> Track It</a></li>
+      <li><a href="javascript:void(0);" class="letTalk"><i class="icon-messageBox">Message</i><br>
+        Message<br>
+        Center</a></li>
     </ul>
   </div>
   <!-- Right Message Icon End--> 
   
   <!-- Message Alert -->
-    <section class="messageAlert-Wrapper">
-      <div class="messageHeading">
-          <a href="javascript:;" class="messageAlert semiBold">3 alerts need your attention <i class="icon-arrowDown pull-right">Arrow</i></a>
-      </div>
-      <div class="messageAlert_Area">
-          <ul class="messageSlider messageSlider-DS">
-              <li>
-                  <div class="messageSlider-left">
-                      <p class="topText">Before you can proceed, there’s some action / information we need from you.</p>
-                      <span class="textTrasform">3 ALERTS REMAIN</span>
-                      <div class="messageSlider-Content">
-                          <div class="messageSlider-Content-panel clr-drkBlue">
-                              <div><span class="smallText">Order:</span> 7281169</div>
-                              <div class="largeText semiBold">02.08.14</div>
-                              <div><span class="smallText">Status:</span> Delivered + Processed</div>
-                          </div>
-                          <div class="messageSlider-Content-panel clr-blue">
-                              <div><span class="smallText">We need a on</span> Stock Recount<span class="smallText"> on</span></div>
-                              <div class="largeText semiBold">20007</div>
-                              <div><span class="smallText semiBold">Chicken Patty</span></div>
-                          </div>
-                          <div class="messageSlider-Content-panel">
-                              <div><span class="smallText clr-blue">Solution</span></div>
-                              <p>Watch your stock count, and double <br>
-                              check for accuracy to avoid alerts, <br>
-                              overall waste.</p>
-                          </div>
-                      </div>
-                      <div class="messageSlider-Content-bottom">
-                          <p>Acknowledge receipt of this alert</p>
-                          <a href="javascript:;" class="seenbyMe"></a>
-                      </div>
-                  </div>
-                  <div class="messageSlider-right">
-                      <div class="messageSlider-Content clr-drkGrey">
-                          <div><span class="smallText">Order:</span> 728</div>
-                          <div class="largeText semiBold">03</div>
-                          <div><span class="smallText">Status:</span> Del</div>
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="messageSlider-left">
-                      <p class="topText">Before you can proceed, there’s some action / information we need from you.</p>
-                      <span class="textTrasform">3 ALERTS REMAIN</span>
-                      <div class="messageSlider-Content">
-                          <div class="messageSlider-Content-panel clr-drkBlue">
-                              <div><span class="smallText">Order:</span> 7281169</div>
-                              <div class="largeText semiBold">03.08.14</div>
-                              <div><span class="smallText">Status:</span> Delivered + Processed</div>
-                          </div>
-                          <div class="messageSlider-Content-panel clr-blue">
-                              <div><span class="smallText">We need a on</span> Stock Recount<span class="smallText"> on</span></div>
-                              <div class="largeText semiBold">20007</div>
-                              <div><span class="smallText semiBold">Chicken Patty</span></div>
-                          </div>
-                          <div class="messageSlider-Content-panel">
-                              <div><span class="smallText clr-blue">Solution</span></div>
-                              <p>Watch your stock count, and double <br>
-                              check for accuracy to avoid alerts, <br>
-                              overall waste.</p>
-                          </div>
-                      </div>
-                      <div class="messageSlider-Content-bottom">
-                          <p>Acknowledge receipt of this alert</p>
-                          <a href="javascript:;" class="seenbyMe"></a>
-                      </div>
-                  </div>
-                  <div class="messageSlider-right">
-                      <div class="messageSlider-Content clr-drkGrey">
-                          <div><span class="smallText">Order:</span> 728</div>
-                          <div class="largeText semiBold">04</div>
-                          <div><span class="smallText">Status:</span> Del</div>
-                      </div>
-                  </div>
-              </li>
-              <li>
-                  <div class="messageSlider-left">
-                      <p class="topText">Before you can proceed, there’s some action / information we need from you.</p>
-                      <span class="textTrasform">3 ALERTS REMAIN</span>
-                      <div class="messageSlider-Content">
-                          <div class="messageSlider-Content-panel clr-drkBlue">
-                              <div><span class="smallText">Order:</span> 7281169</div>
-                              <div class="largeText semiBold">04.08.14</div>
-                              <div><span class="smallText">Status:</span> Delivered + Processed</div>
-                          </div>
-                          <div class="messageSlider-Content-panel clr-blue">
-                              <div><span class="smallText">We need a on</span> Stock Recount<span class="smallText"> on</span></div>
-                              <div class="largeText semiBold">20007</div>
-                              <div><span class="smallText semiBold">Chicken Patty</span></div>
-                          </div>
-                          <div class="messageSlider-Content-panel">
-                              <div><span class="smallText clr-blue">Solution</span></div>
-                              <p>Watch your stock count, and double <br>
-                              check for accuracy to avoid alerts, <br>
-                              overall waste.</p>
-                          </div>
-                      </div>
-                      <div class="messageSlider-Content-bottom">
-                          <p>Acknowledge receipt of this alert</p>
-                          <a href="javascript:;" class="seenbyMe"></a>
-                      </div>
-                  </div>
-                  <div class="messageSlider-right">
-                      <div class="messageSlider-Content clr-drkGrey">
-                          <div><span class="smallText">Order:</span> 728</div>
-                          <div class="largeText semiBold">05</div>
-                          <div><span class="smallText">Status:</span> Del</div>
-                      </div>
-                  </div>
-              </li>
-          </ul>
-      </div>
-      <div class="bodyOpacity"></div>
-    </section>
+  <section class="messageAlert-Wrapper">
+    <div class="messageHeading"> <a href="javascript:;" class="messageAlert semiBold">3 alerts need your attention <i class="icon-arrowDown pull-right">Arrow</i></a> </div>
+    <div class="messageAlert_Area">
+      <ul class="messageSlider messageSlider-DS">
+        <li>
+          <div class="messageSlider-left">
+            <p class="topText">Before you can proceed, there’s some action / information we need from you.</p>
+            <span class="textTrasform">3 ALERTS REMAIN</span>
+            <div class="messageSlider-Content">
+              <div class="messageSlider-Content-panel clr-drkBlue">
+                <div><span class="smallText">Order:</span> 7281169</div>
+                <div class="largeText semiBold">02.08.14</div>
+                <div><span class="smallText">Status:</span> Delivered + Processed</div>
+              </div>
+              <div class="messageSlider-Content-panel clr-blue">
+                <div><span class="smallText">We need a on</span> Stock Recount<span class="smallText"> on</span></div>
+                <div class="largeText semiBold">20007</div>
+                <div><span class="smallText semiBold">Chicken Patty</span></div>
+              </div>
+              <div class="messageSlider-Content-panel">
+                <div><span class="smallText clr-blue">Solution</span></div>
+                <p>Watch your stock count, and double <br>
+                  check for accuracy to avoid alerts, <br>
+                  overall waste.</p>
+              </div>
+            </div>
+            <div class="messageSlider-Content-bottom">
+              <p>Acknowledge receipt of this alert</p>
+              <a href="javascript:;" class="seenbyMe"></a> </div>
+          </div>
+          <div class="messageSlider-right">
+            <div class="messageSlider-Content clr-drkGrey">
+              <div><span class="smallText">Order:</span> 728</div>
+              <div class="largeText semiBold">03</div>
+              <div><span class="smallText">Status:</span> Del</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="messageSlider-left">
+            <p class="topText">Before you can proceed, there’s some action / information we need from you.</p>
+            <span class="textTrasform">3 ALERTS REMAIN</span>
+            <div class="messageSlider-Content">
+              <div class="messageSlider-Content-panel clr-drkBlue">
+                <div><span class="smallText">Promotional Proposal</span></div>
+                <div class="largeText semiBold">20.06.14</div>
+                <div><span class="smallText">Status:</span> For Review + Approval</div>
+              </div>
+              <div class="messageSlider-Content-panel clr-blue">
+                <div><span class="smallText"><span class="semiBold">Status:</span> Forecast </span></div>
+                <div class="mediumText semiBold">
+                  <div>Chicken</div>
+                  <div>Food Event</div>
+                  <div>2014</div>
+                </div>
+              </div>
+              <div class="messageSlider-Content-panel">
+                <div><span class="smallText clr-blue">Solution</span></div>
+                <div class="semiBold proposal">
+                  <p><span class="fnt-21">Promotional Proposal</span><br>
+                    will be available until 27.06.14<br>
+                  </p>
+                  <p class="fnt-13 semiBold"> adjustments may be made up until that date.</p>
+                </div>
+                <p class="mrgTop15">If you would like to ammend<br>
+                  any of the proposed toy allocation- <br>
+                  <a href="javascript:void(0);" class="semiBold">View &amp; Approve.</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="messageSlider-right">
+            <div class="messageSlider-Content clr-drkGrey">
+              <div><span class="smallText">Order:</span> 728</div>
+              <div class="largeText semiBold">04</div>
+              <div><span class="smallText">Status:</span> Del</div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="messageSlider-left">
+            <p class="topText">Before you can proceed, there’s some action / information we need from you.</p>
+            <span class="textTrasform">3 ALERTS REMAIN</span>
+            <div class="messageSlider-Content">
+              <div class="messageSlider-Content-panel clr-drkBlue toy-allocation">
+                <div class="semiBold"><span class="smallText">Happy Meal Toy Allocation:</span></div>
+                <div><span class="smallText fnt-19">How to Train Your Dragon</span></div>
+                <div class="fnt-13">Running</div>
+                <div class="semiBold">July 2, 2014 -<br>
+                  August 26th, 2014</div>
+              </div>
+              <div class="messageSlider-Content-panel clr-blue">
+                <div class="semiBold"><span class="smallText">Status:</span> Toy Order Proposed </div>
+                <ul class="order-proposed">
+                  <li><span>Order:</span> 7281169 - Tuesday, June 24</li>
+                  <li><span>Order:</span> 7281185 - Tuesday, July 1</li>
+                  <li><span>Order:</span> 7281185 - Tuesday, July 8</li>
+                  <li><span>Order:</span> 7281185 - Tuesday, July 22</li>
+                  <li><span>Order:</span> 7281193 - Tuesday, July 29</li>
+                  <li><span>Order:</span> 7281231 - Tuesday, August 5</li>
+                </ul>
+              </div>
+              <div class="messageSlider-Content-panel">
+                <div><span class="smallText clr-blue">Solution</span></div>
+                <div class="semiBold proposal">
+                  <p><span class="fnt-21">Toy Proposal</span><br>
+                    will be available until 10.08.14<br>
+                  </p>
+                  <p class="fnt-13 semiBold"> adjustments may be made up until that date.</p>
+                </div>
+                <p class="mrgTop15">If you would like to ammend<br>
+                  any of the proposed toy allocation- <br>
+                  <a href="javascript:void(0);" class="semiBold">View &amp; Approve.</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="messageSlider-right">
+            <div class="messageSlider-Content clr-drkGrey">
+              <div><span class="smallText">Order:</span> 728</div>
+              <div class="largeText semiBold">05</div>
+              <div><span class="smallText">Status:</span> Del</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="bodyOpacity"></div>
+  </section>
   <!-- Message Alert -->
   <header class="topHeader bg-blue stripWrapper">
     <div class="container">
       <div class="row">
         <div class="strip">
-          <div class="pull-left"> <em class="circle">1</em> <span>Order Message Center</span><small>Keep an eye on this to understand what is going on with in progress orders.</small> </div>
-          <div class="pull-right">
-          	  <small class=" mrgRight5">Where your stores stack up against other multi-franchisees</small>
-              <span class="digit "><sup>#</sup>4</span><span class="fnt-15">of 10</span>
-              <span class="text">Make it <br>Better?</span>
-          </div>
+          <div class="pull-left"> <em class="circle">1</em> <span>Your Stores Order Activity</span> </div>
+          <div class="pull-right"> <span class="digit "><sup>#</sup>29</span><span class="text">Current Group <br>
+            Ranking of 500</span> </div>
+        </div>
       </div>
-    </div>
     </div>
   </header>
   <section class="messageSec">
@@ -172,105 +178,97 @@
       <div class="row aggregateWrapper"> 
         
         <!-- Aggregate Carousel -->
-        <div class="messageView pull-left"><ul class="aggregateCarousel">
-          <li>
-            <div>
-              <p>Chester 1</p>
-              <h4 class="semiBold">131</h4>
-              <p class="aggregate-txtGrey">Manager <span>Jim Johnson</span></p>
-            </div>
-            <div>
-              <p class="fnt-11">Where this store stacks up</p>
-              <h3 class="semiBold"><sup>#</sup>302 <small class="text-regular">of 1300</small></h3>
-            </div>
-            <div class="aggregateLastDiv">
-              <p class="order-status semiBold">Order Success</p>
-              <p class="fnt-12 clr-danger">Came in Lower than expected</p>
-              <p class="fnt-10 text-uppercase">Let’s Find out Why.</p>
-            </div>
-            <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
-          <li>
-            <div>
-              <p>Chester 4 D/T</p>
-              <h4 class="semiBold">238</h4>
-              <p class="aggregate-txtGrey">Manager <span>Nick Cage</span></p>
-            </div>
-            <div>
-              <p class="fnt-11">Where this store stacks up</p>
-              <h3 class="semiBold"><sup>#</sup>1299 <small class="text-regular">of 1300</small></h3>
-            </div>
-            <div class="aggregateLastDiv">
-              <p class="order-status status-success semiBold">Order Success</p>
-              <p class="fnt-12">Came in RIght on Target</p>
-              <p class="fnt-10 text-uppercase">Congrats</p>
-            </div>
-            <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
-          <li>
-            <div>
-              <p>Chester 2 D/T</p>
-              <h4 class="semiBold">502</h4>
-              <p class="aggregate-txtGrey">Manager <span>Sue Johnson</span></p>
-            </div>
-            <div>
-              <p class="fnt-11">Where this store stacks up</p>
-              <h3 class="semiBold"><sup>#</sup>1200 <small class="text-regular">of 1300</small></h3>
-            </div>
-            <div class="aggregateLastDiv">
-              <p class="order-status status-success semiBold">Order Success</p>
-              <p class="fnt-12">Came in RIght on Target</p>
-              <p class="fnt-10 text-uppercase">Congrats</p>
-            </div>
-            <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
-          <li>
-            <div>
-              <p>Chester Forum</p>
-              <h4 class="semiBold">812</h4>
-              <p class="aggregate-txtGrey">Manager <span>Zac Posen</span></p>
-            </div>
-            <div>
-              <p class="fnt-11">Where this store stacks up</p>
-              <h3 class="semiBold"><sup>#</sup>002 <small class="text-regular">of 1300</small></h3>
-            </div>
-            <div class="aggregateLastDiv">
-              <p class="order-status status-warning semiBold">Order Success</p>
-              <p class="fnt-12">Came in Slightly Below Target</p>
-              <p class="fnt-10 text-uppercase">Let’s Find out Why.</p>
-            </div>
-            <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
-          <li>
-            <div>
-              <p>Chester Broughton</p>
-              <h4 class="semiBold">956</h4>
-              <p class="aggregate-txtGrey">Manager <span>Jim Pugh</span></p>
-            </div>
-            <div>
-              <p class="fnt-11">Where this store stacks up</p>
-              <h3 class="semiBold"><sup>#</sup>001 <small class="text-regular">of 1300</small></h3>
-            </div>
-            <div class="aggregateLastDiv">
-              <p class="order-status status-success semiBold">Order Success</p>
-              <p class="fnt-12">Came in RIght on Target</p>
-              <p class="fnt-10 text-uppercase">Congrats</p>
-            </div>
-            <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
-        </ul></div>
-        <!-- Aggregate Carousel End --> 
-        <div class="aggregate-right pull-right">
-        <div class="row"><h1><img src="images/McD-logo.png" class="img-responsive pull-left">Important<br>
-Alerts</h1>
-<p><i class="order-status-aggregate"></i>&nbsp;</p>
-<p><span class="fnt-10">Store:</span> <span class="fnt-12">561</span></p>
-<p><img src="images/Order-Happiness_Red_Blk.gif" class="pull-left" ><span class="fnt-10">Issue</span><br>
-Persistanly Low on the<br>
-Order Happiness Score<br>
-Driven Mostly by High Waste<br>
-<span class="fnt-12"><span class="clr-danger">LET’ S FIX IT</span><br>
-Dig Into The Data</span></p>
-
-</div>
-        
+        <div class="messageView pull-left">
+          <ul class="aggregateCarousel">
+            <li>
+              <div>
+                <p>Chester 1</p>
+                <h4 class="semiBold">131</h4>
+                <p class="aggregate-txtGrey">Manager <span>Jim Johnson</span></p>
+              </div>
+              <div class="store-rank">
+                <h3 class="semiBold"><sup>#</sup>302 <small class="text-regular pull-right"><span>Store Rank</span><br>
+                  of 1300</small></h3>
+              </div>
+              <div class="aggregateLastDiv">
+                <p class="order-status semiBold">Order Success</p>
+                <p class="fnt-10 text-uppercase"> TRANSFERS IN <span class="clr-danger">15%</span><br>
+                  ORDER MODIFICATION <span class="clr-danger">34%</span><br>
+                  LATE ORDER MODIFICATION <span class="clr-danger">34%</span></p>
+              </div>
+              <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
+            <li>
+              <div>
+                <p>Chester 4 D/T</p>
+                <h4 class="semiBold">238</h4>
+                <p class="aggregate-txtGrey">Manager <span>Nick Cage</span></p>
+              </div>
+              <div class="store-rank">
+                <h3 class="semiBold"><sup>#</sup>1299 <small class="text-regular pull-right"><span>Store Rank</span><br>
+                  of 1300</small></h3>
+              </div>
+              <div class="aggregateLastDiv">
+                <p class="order-status status-success semiBold">Order Success</p>
+                <p class="fnt-10 text-uppercase"> TRANSFERS IN <span class="clr-success">100%</span><br>
+                  ORDER MODIFICATION <span class="clr-warning">65%</span><br>
+                  LATE ORDER MODIFICATION <span class="clr-success">95%</span></p>
+              </div>
+              <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
+            <li>
+              <div>
+                <p>Chester 2 D/T</p>
+                <h4 class="semiBold">502</h4>
+                <p class="aggregate-txtGrey">Manager <span>Sue Johnson</span></p>
+              </div>
+              <div class="store-rank">
+                <h3 class="semiBold"><sup>#</sup>1200 <small class="text-regular pull-right"><span>Store Rank</span><br>
+                  of 1300</small></h3>
+              </div>
+              <div class="aggregateLastDiv">
+                <p class="order-status status-success semiBold">Order Success</p>
+                <p class="fnt-10 text-uppercase"> TRANSFERS IN <span class="clr-success">100%</span><br>
+                  ORDER MODIFICATION <span class="clr-warning">65%</span><br>
+                  LATE ORDER MODIFICATION <span class="clr-success">95%</span></p>
+              </div>
+              <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
+            <li>
+              <div>
+                <p>Chester Forum</p>
+                <h4 class="semiBold">812</h4>
+                <p class="aggregate-txtGrey">Manager <span>Zac Posen</span></p>
+              </div>
+              <div class="store-rank">
+                <h3 class="semiBold"><sup>#</sup>002 <small class="text-regular pull-right"><span>Store Rank</span><br>
+                  of 1300</small></h3>
+              </div>
+              <div class="aggregateLastDiv">
+                <p class="order-status status-warning semiBold">Order Success</p>
+                <p class="fnt-10 text-uppercase"> TRANSFERS IN <span class="clr-warning">72%</span><br>
+                  ORDER MODIFICATION <span class="clr-warning">65%</span><br>
+                  LATE ORDER MODIFICATION <span class="clr-danger">25%</span></p>
+              </div>
+              <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
+            <li>
+              <div>
+                <p>Chester Broughton</p>
+                <h4 class="semiBold">956</h4>
+                <p class="aggregate-txtGrey">Manager <span>Jim Pugh</span></p>
+              </div>
+              <div class="store-rank">
+                <h3 class="semiBold"><sup>#</sup>001 <small class="text-regular pull-right"><span>Store Rank</span><br>
+                  of 1300</small></h3>
+              </div>
+              <div class="aggregateLastDiv">
+                <p class="order-status status-success semiBold">Order Success</p>
+                <p class="fnt-10 text-uppercase"> TRANSFERS IN <span class="clr-success">100%</span><br>
+                  ORDER MODIFICATION <span class="clr-warning">65%</span><br>
+                  LATE ORDER MODIFICATION <span class="clr-success">95%</span></p>
+              </div>
+              <a href="javascript:;" class="learnMore semiBold">LEARN MORE</a> </li>
+          </ul>
         </div>
-
+        <!-- Aggregate Carousel End --> 
+        
       </div>
     </div>
   </section>
@@ -280,7 +278,7 @@ Dig Into The Data</span></p>
       <div class="container">
         <div class="row">
           <div class="strip strip20">
-            <div class="pull-left"> <em class="circle">2</em> <span>Store Events</span> </div>
+            <div class="pull-left"> <em class="circle">2</em> <span>National Events</span> </div>
             <div class="pull-right"> <a title="Calendar View" href="calendar.html" class="calenderView"><i class="icons-calendar">Calendar</i><span>Calendar View</span></a> </div>
           </div>
         </div>
@@ -292,14 +290,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left fnt-14 date"> <span class="fnt-13">07.08.14</span> </div>
+            <div class="pull-left day">&nbsp;</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">32&deg;</span>
-              <p>We increased your Coke order due to the excessive heat forecast in your area.</p>
-            </div>
-            <span class="destny">H: 23&deg;  L: 21&deg;</span> </div>
+          <div class="row">
+            <div class="date">08.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -310,14 +306,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left today-date"> Today <span class="fnt-13">08.08.14</span> </div>
+            <div class="pull-left day">Today</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">31&deg;</span>
-              <p>We increased your Coke order due to the excessive heat forecast in your area.</p>
-            </div>
-            <span class="destny">H: 31&deg;  L: 20&deg;</span> </div>
+          <div class="row">
+            <div class="date clr-white">09.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -328,14 +322,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left fnt-14 date"> Tomorrow <span class="fnt-13">09.08.14</span> </div>
+            <div class="pull-left day"><span class="fnt-20">Tomorrow</span></div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">38&deg;</span>
-              <p>We increased your Coke order due to the excessive heat forecast in your area.</p>
-            </div>
-            <span class="destny">H: 38&deg;  L: 21&deg;</span> </div>
+          <div class="row">
+            <div class="date clr-white">10.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -348,12 +340,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left date"><span class="fnt-13">10.08.14</span> </div>
+            <div class="pull-left day">&nbsp;</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">30&deg;</span> </div>
-            <span class="destny">H: 23&deg;  L: 20&deg;</span> </div>
+          <div class="row">
+            <div class="date">11.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -364,14 +356,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left fnt-14 date"> <span class="fnt-13">07.08.14</span> </div>
+            <div class="pull-left day">&nbsp;</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">32&deg;</span>
-              <p>We increased your Coke order due to the excessive heat forecast in your area.</p>
-            </div>
-            <span class="destny">H: 23&deg;  L: 21&deg;</span> </div>
+          <div class="row">
+            <div class="date">12.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -382,14 +372,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left today-date"> Today <span class="fnt-13">08.08.14</span> </div>
+            <div class="pull-left day">&nbsp;</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">31&deg;</span>
-              <p>We increased your Coke order due to the excessive heat forecast in your area.</p>
-            </div>
-            <span class="destny">H: 31&deg;  L: 20&deg;</span> </div>
+          <div class="row">
+            <div class="date">13.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -400,14 +388,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left fnt-14 date"> Tomorrow <span class="fnt-13">09.08.14</span> </div>
+            <div class="pull-left day">&nbsp;</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">38&deg;</span>
-              <p>We increased your Coke order due to the excessive heat forecast in your area.</p>
-            </div>
-            <span class="destny">H: 38&deg;  L: 21&deg;</span> </div>
+          <div class="row">
+            <div class="date">14.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -420,30 +406,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left date"><span class="fnt-13">10.08.14</span> </div>
+            <div class="pull-left day">&nbsp;</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">30&deg;</span> </div>
-            <span class="destny">H: 23&deg;  L: 20&deg;</span> </div>
-        </div>
-        <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
-          <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
-          <span class="clr-danger fnt-11">Event</span>
-          <p>School event days 11:00-16:00 at Grant Park. <span class="semiBold">Plan for stock increase.</span></p>
-        </div>
-        <img src="images/tBar2.png" alt="" /> </div>
-      <div class="event-panel">
-        <div class="row-top">
           <div class="row">
-            <div class="pull-left fnt-14 date"> <span class="fnt-13">07.08.14</span> </div>
-            <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
+            <div class="date">15.08.13 </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">32&deg;</span>
-              <p>We increased your Coke order due to the excessive heat forecast in your area.</p>
-            </div>
-            <span class="destny">H: 23&deg;  L: 21&deg;</span> </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -454,14 +422,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left today-date"> Today <span class="fnt-13">08.08.14</span> </div>
+            <div class="pull-left day">&nbsp;</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">31&deg;</span>
-              <p>We increased your Coke order due to the excessive heat forecast in your area.</p>
-            </div>
-            <span class="destny">H: 31&deg;  L: 20&deg;</span> </div>
+          <div class="row">
+            <div class="date">16.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -472,14 +438,12 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left fnt-14 date"> Tomorrow <span class="fnt-13">09.08.14</span> </div>
+            <div class="pull-left day">&nbsp;</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">38&deg;</span>
-              <p>We increased your Coke order due to the excessive heat forecast in your area.</p>
-            </div>
-            <span class="destny">H: 38&deg;  L: 21&deg;</span> </div>
+          <div class="row">
+            <div class="date">17.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -492,12 +456,28 @@ Dig Into The Data</span></p>
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
-            <div class="pull-left date"><span class="fnt-13">10.08.14</span> </div>
+            <div class="pull-left day">&nbsp;</div>
             <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
           </div>
-          <div class="row"> <span class="icon-temp">Sunny</span>
-            <div class="temp-Detail"> <span class="deg">30&deg;</span> </div>
-            <span class="destny">H: 23&deg;  L: 20&deg;</span> </div>
+          <div class="row">
+            <div class="date">18.08.13 </div>
+          </div>
+        </div>
+        <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
+          <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
+          <span class="clr-danger fnt-11">Event</span>
+          <p>School event days 11:00-16:00 at Grant Park. <span class="semiBold">Plan for stock increase.</span></p>
+        </div>
+        <img src="images/tBar2.png" alt="" /> </div>
+      <div class="event-panel">
+        <div class="row-top">
+          <div class="row">
+            <div class="pull-left day">&nbsp;</div>
+            <div class="pull-right"> <a href="add_event_popup.html" class="ajax100 event">Add event <i class="icon-addEvent">Add Event</i></a> </div>
+          </div>
+          <div class="row">
+            <div class="date">19.08.13 </div>
+          </div>
         </div>
         <div class="row-bottom"> <span class="clr-primary fnt-11">Promotion <small class="clr-lightGrey fnt-10">National</small></span>
           <p>Big Tasty Promotion extended to 18.8.14. <span class="semiBold">Plan for stock increase.</span></p>
@@ -509,116 +489,39 @@ Dig Into The Data</span></p>
     <!-- Event Slider End --> 
   </section>
   <div class="clearfix"></div>
-  <section class="bg-darkBlue eventWrapper">
+  <section class="bg-darkBlue padTop80"> </section>
+  
+  <!-- Blue Strip -->
+  <section class="bg-blue stripWrapper">
     <div class="container">
       <div class="row">
-        <div class="pull-right text-right"> <a href="add_event_popup.html" class="ajax100 eventAdd">Add Event <i class="icons-Event">Add Event</i></a> </div>
+        <div class="strip strip20">
+          <div class="pull-left"> <em class="circle">3</em> <span>Communicate</span> </div>
+        </div>
       </div>
     </div>
   </section>
+  <!-- Blue Strip End-->
+  
   <footer>
     <div class="footer-static">
       <div class="container">
         <div class="row">
-          <div class="footer-panel pull-left">
-            <p class="footer-transform">COLLECTIONS</p>
-            <p class="footer-text">Have Something needing <br>
-              to be collected/credited?</p>
-            <h3 class="semiBold">Schedule a Pick-Up/Credit.</h3>
-            <div class="custom-select row">
-              <div class="row collectionType">
-                <select>
-                  <option>Collection Type</option>
-                  <option>Cardboard</option>
-                  <option>Cooking Oil</option>
-                  <option>Product Collection</option>
-                </select>
-              </div>
-              <div class="product-collection">
-                <div class="row product-row mrgBottom15">
-                  <div class="wrin pull-left">
-                    <label class="fnt-17">WRIN</label>
-                    <input id="product-wrin" placeholder="082857">
-                    <input type="hidden" id="product-wrin-id">
-                    <span class="fnt-15" id="product-wrin-description">CHICKEN-LEGEND PATTY</span> </div>
-                  <div class="custom-select">
-                    <select>
-                      <option>Reason For Collection</option>
-                      <option>Picked incorrectly</option>
-                      <option>Damaged</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div class="custom-select double-selectBotm">
-                    <div class="double-select">
-                      <div class="double-select-left pull-left">
-                        <select>
-                          <option>Qty.</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
-                      <div class="double-select-Right pull-left">
-                        <select>
-                          <option>Units</option>
-                          <option>Case</option>
-                          <option>Box</option>
-                          <option>Ind.</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row request-credit">
-                  <div class="checkboxWrapper">
-                    <input tabindex="1" type="checkbox" id="input-1">
-                    <label for="input-1" class="fnt-23">I’m Requesting a Credit</label>
-                  </div>
-                  <a href="javascript:;" class="btnSubmitCollection btn-blue btn-radius10 btn-paddding10 fnt-20 semiBold  disIn-Block pull-right">SUBMIT FOR COLLECTION</a> </div>
-              </div>
-              <div class="row collectionType-Details cardboardPickUp" >
-                <div class="pull-left">
-                  <p class="dateHeading">Next available date:</p>
-                  <span class="date">03.04.14</span><i class="icons-calendar">Calendar</i> </div>
-                <div class="pull-right"> <a href="javascript:;" class="btn-blue btn-radius10 btn-paddding10 fnt-20 semiBold mrgTop10 disBlock">SUBMIT FOR COLLECTION</a> </div>
-              </div>
-              <div class="row collectionType-Details cookingOil">
-                <div class="row nextSchedule">
-                  <div class="pull-left">
-                    <p class="fnt-16">Your next scheduled oil pickup is on <span class="semiBold" id="calDate">03.01.14.</span></p>
-                  </div>
-                  <div class="pull-right">
-                    <p class="fnt-16 semiBold"><a href="javascript:void();" class="clr-warning">Cancel or reschedule?</a></p>
-                  </div>
-                </div>
-                <div class="row">
-                  
-
-                  <ul class="detailCalendar">
-                    <li><span></span>Aready scheduled</li>
-                    <li><span class="bg-grey"></span>Avallable pickup dates</li>
-                  </ul>
-                  <p class="semiBold fnt-14 clr-primary posRelative">Schedule an additional pickup?<i class="icons-calendar" id="example3">Calendar</i>
-                    <input type="text" id="example5" gldp-id="mydate">
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="footer-panel footer-panelRight pull-right text-right" id="footerMyTeam">
             <p class="footer-transform">MY TEAM</p>
-            <p class="footer-text">Need Some Help?</p>
+            <p class="footer-text custom-select">
+              <select>
+                <option>131 Chester 1</option>
+              </select>
+            </p>
             <ul class="myTeamList">
-              <li> <img src="images/img-daryl.png" class="img-responsive" alt="Daryl" />
+              <li> <img src="images/andy-scanion.jpg" class="img-responsive" alt="Daryl" />
                 <div class="teamDetail"> <span>Your Planner</span>
-                  <h4 class="semiBold">Daryl Olney </h4>
+                  <h4 class="semiBold">Andy Scanion </h4>
                   <p>Sr. Planner MartinBrower</p>
                   <a href="popUp/team-profile-popUp.html" class="semiBold ajax">Learn More</a> <a href="javascript:;" class="semiBold">Send Daryl A Message</a> </div>
               </li>
-              <li> <img src="images/jenna.png" class="img-responsive" alt="jenna" />
+              <li> <img src="images/jenna.jpg" class="img-responsive" alt="jenna" />
                 <div class="teamDetail"> <span>Your Regional Customer Service Manager</span>
                   <h4 class="semiBold">Jenna Holmes</h4>
                   <p>Sr. Field Manager MartinBrower</p>
@@ -632,31 +535,25 @@ Dig Into The Data</span></p>
     <div class="footer-fixed">
       <div class="container">
         <div class="row">
-          <div class="footer-fixed-small"> <img class="img-responsive" src="images/mb-logo-footer.jpg" alt="" />
+          <div class="footer-fixed-small"> <img class="img-responsive" src="images/mb-logo-footer.gif" alt="" />
             <div class="footer-fixed-text">
-              <p><span class="semiBold">Welcome Back Jim</span> |  log out</p>
-              <h5> Sync. </h5>
+              <p><span class="semiBold">Welcome Back Jim</span> <span>|</span> <a href="javascript:void(0);">log out</a></p>
             </div>
           </div>
           <div class="footer-fixed-large pull-right">
             <ul class="footerNav">
-              <li><a href="order.html" title="Orders">Orders</a></li>
               <li><a href="calendar.html" title="Calendar">Calendar</a></li>
-              <li><a href="javascript:;" title="Order Success">Order Success</a></li>
-              <li><a href="non-conformance.html" title="Non-Conformance">Non-Conformance</a></li>
-              <li><a href="tradis.html" title="Tardis">TARDIS</a></li>
               <li><a href="financials.html" title="Financials">Financials</a></li>
-              <li><a href="ops-supply.html" title="Ops Supply">Ops Supply</a></li>
               <li><a href="how-we-do.html" title="How We Do It">How We Do It</a></li>
               <li> <a href="javascript:;" title="Let's Talk" class="let_talk">Let’s Talk</a>
                 <div class="letpopup">
                   <h3 class="semiBold">Contact<br>
                     Your Planner</h3>
-                  <h4 class="semiBold">Daryl Olney</h4>
+                  <h4 class="semiBold">Andy Scanion</h4>
                   <span>Sr. Planner MartinBrower</span>
                   <ul class="listNumber">
                     <li><i class="icon-phone">icon Phone</i>+44(0) 7791 646416</li>
-                    <li><i class="icon-messagebox">icon Phone</i>DOlney@martinbrower.com</li>
+                    <li><i class="icon-messagebox">icon Phone</i><a href="mailto:AScanino@martinbrower.com">AScanino@martinbrower.com</a></li>
                   </ul>
                   <textarea class="let_comment" placeholder="Send Daryl a message right from here."></textarea>
                   <p class="disIn-Block semiBold fnt-10">Other Important Numbers</p>
@@ -664,17 +561,16 @@ Dig Into The Data</span></p>
                 </div>
               </li>
             </ul>
-              </div>
+          </div>
         </div>
       </div>
     </div>
-  
   </footer>
 </div>
 
 <!-- Scripts --> 
 <script type="text/javascript" src="js/jquery-1.11.1.js"></script> 
-<script  type="text/javascript" src="js/jquery-ui-1.11.1.js"></script>
+<script  type="text/javascript" src="js/jquery-ui-1.11.1.js"></script> 
 <script type="text/javascript" src="js/jquery.bxslider.js"></script> 
 <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script> 
 <script type="text/javascript" src="js/flowslider.jquery.js"></script> 

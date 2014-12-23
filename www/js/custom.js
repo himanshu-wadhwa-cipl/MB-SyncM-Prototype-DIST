@@ -1,4 +1,15 @@
 (function($){
+/*	var width = $(window).width();
+	$(window).resize(function() {
+		if (width > 767 && $(window).width() < 767) {
+			location.reload();
+		}
+		else if (width < 767 && $(window).width() > 767) {
+			location.reload();
+	}
+});​*/
+
+	
 	$(function(){
 		var windowWidth = $(window).width();
 		var messageAlertCount=0;
@@ -61,11 +72,11 @@
 		//Aggregate Carousel
 		if($('.aggregateCarousel').length){
 			$('.aggregateCarousel').bxSlider({
-				slideWidth: 170,
+				slideWidth: 212,
 				minSlides: 2,
-				maxSlides: 4,
+				maxSlides: 5,
 				moveSlides: 1,
-				slideMargin: 11,
+				slideMargin: 3,
 				pager:false,
 			  });
 		}
@@ -175,21 +186,31 @@
 				$(".group3").colorbox({rel:'group3', transition:"none", width:"85%"});
 			}
 		//Custom Scroll Pane
-		
+		if($('.scroll-pane').length){
 			$('.scroll-pane').each(
 				function()
 				{
+				
 					$(this).jScrollPane(
 						{
 							showArrows: $(this).is('.arrow'),
 							autoReinitialise:true
+							
+				
 						}
 					);
 				
 				}
 			)
 		
+		var pane = $('.scroll-pane');
+			var api = pane.data('jsp');
+				$(window).resize(function(){
+				api.scrollTo(0, 0);
+				return false;
+		})
 		
+		}
         if(windowWidth < 1025){
 			if($('.scroll-panes').length){
                 $('.scroll-panes').each(
@@ -320,23 +341,6 @@
 		  	});
 		}
 		
-//		$('.tablepopUp').on('click', function(e){
-//			
-//           
-//            //e.preventDefault();
-//            //$(".ajaxBtn").colorbox({width:"100%"});
-//             //e.stopPropagation();
-//            
-//		})
-//        $(document).click(function (e)
-//         {
-//             var container = $(".tablepopUp");
-//
-//             if (container.has(e.target).length === 0)
-//             {
-//                container.hide();
-//             }
-//         });
         
 		$('.btn-cancel,.btn-submit').on('click', function(){
 
@@ -654,7 +658,11 @@
 					$styledSelect.removeClass('active');
 					$list.hide();
 				});
-			
+				// Custom Select Dropdown Height 
+				if($('.options>li').length>2){
+					$('.options').css('height','100px')
+				}
+				
 				});
 		/* Custom Select End*/
 

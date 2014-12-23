@@ -24,7 +24,7 @@
 	.mobBodyWrapper{display:block !important; width:100%; float:left}
 }
 @media (max-width: 768px) {
-	.home .horizontal-only{width:1550px;}
+	
 	 .messageSlider-Content{left:25px;}
 	 .messageSlider-left, .messageSlider-right{min-height:460px;}
 .calendar-month-view .promo-events li{line-height:12px; margin-bottom:5px; padding-top:5px;}
@@ -106,7 +106,6 @@
 	.order-StatusSection, .order-status-detail{vertical-align:top!important; margin-top:0!important;}
 	.order-status-detail:before{border:none}
 	.order-dateSection{margin-bottom:20px}
-	.aggregateWrapper .messageView{width:54.0625%;}
 	.aggregateWrapper .aggregate-right{width:37.5174%;}
 	.footer-panel{width: 100%; display: block; float: left !important; margin-bottom: 10px;}
     .frontView li .frontViewContent{padding: 0 10px;}
@@ -141,9 +140,7 @@
 @media only screen and (min-width : 768px) and (max-width :1145px)  { 
 .latestOrder .orderListCarousel:after{display:none;}
 }
-@media (min-width: 1152px) {
-.jspHorizontalBar { display: none !important; }
-}
+
 @media (max-width: 1152px) {
 	.container{padding:0 10px}
 	.productContainer{padding:0 10px;}
