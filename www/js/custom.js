@@ -657,7 +657,7 @@
 					$styledSelect.removeClass('active');
 					$list.hide();
 				});
-				// Custom Select Dropdown Height 
+				// Setting Custom Select Dropdown Height 
 				if($('.options>li').length>2){
 					$('.options').css('height','100px')
 				}
@@ -843,8 +843,119 @@
 		}
         
         
+	// Check Parameters for Message Center Visibility Start here	 
+		var visibility = '';
+			visibility = getUrlParameter('visible');
+			if(visibility){
+				$('#message-center-wrapper').addClass('visible');
+			}
+			//Open Message Cneter Box Start Here
+				$(".letTalk").click(function(e){
+					$('#message-center-wrapper').addClass('visible');
+				});
+			//Open Message Cneter Box Close Here
+			
+			//Close Message Cneter Box Start Here
+			$('#close-message-center').click(function(){
+				$('#message-center-wrapper').removeClass('visible');
+			})
+			//Close Message Cneter Box End Here
+			
+			//Date and Category Toggle Switch Start here
+			if($('#active-messages .slider').length){
+			$('#active-messages .slider').switchButton({
+				on_label: 'Category',
+				off_label: 'Date',
+				width: 28,
+				height: 17,
+				button_width: 17
+			}).change(function(){
+				if($(this).prop("checked") == true){
+					$('#category-filtered-messages').show();
+					$('#date-filtered-messages').hide();
+				} else {
+					$('#category-filtered-messages').hide();
+					$('#date-filtered-messages').show();
+				}
+			});
+			}
+			//Date and Category Toggle Switch End here
+			
+			//Archive and Active tabs Start here		
+			$('.message-center-tabs a').click(function(e){
+				e.preventDefault();
+				var id = $(this).attr('href');
+				if(id !='#')
+				{
+					$('#active-message-wrapper, #archive-message-wrapper').hide();
+					$(id).show();
+					$('.message-center-tabs .active').removeClass('active');
+					$(this).parent().addClass('active');
+				}
+			})		
+			//Archive and Active tabs End here	
+			
+			//Message Reply Block Start here			
+			$('.reply-message').click(function(e){
+				e.preventDefault();
+				$('#detail-message-wrapper, #tab-navigation').hide();
+				$('#message-reply-wrapper').show();
+			})	
+			//Message Reply Block End here
+			
+			//Message Reply Cancel Start here		
+			$('.cancel-message-reply').click(function(e){
+				e.preventDefault();
+				$('#detail-message-wrapper, #tab-navigation').show();
+				$('#message-reply-wrapper').hide();
+			})
+			//Message Reply Cancel End here
+			
+			//Setting Height of Message Center to document height
+			$('#message-center-wrapper').css('min-height', $(document).height());
+			
+			//Message Category Accordion Start here
+			$('.accordion-header').click(function(){
+				var elem = $(this);
+				elem.toggleClass('open');
+			})
+			//Message Category Accordion End here
+			
+			//Customization Input type file start here
+			$('.custom-file-upload input').change(function(){
+				var elem = $(this);
+				elem.siblings('.file-name').text(elem.val());
+			})
+			//Customization Input type file End here
+			
+			//Message Search Start here
+			if($('.search-form input[type=text]').val() != '')
+			{
+				$('.search-form').addClass('show-input');
+			}
+	
+			$('.search-form').hover(function(){
+				$(this).addClass('show-input');
+			},function(){
+				if(!$(this).find('input[type=text]').is(':focus')){
+					if($(this).find('input[type=text]').val() == '')
+					{
+						$(this).removeClass('show-input');
+					}
+				}
+				$(this).find('input[type=text]').blur(function(){
+					if($(this).val() == '')
+					{
+						$('.search-form').removeClass('show-input');
+					}
+				})
+			})
+			//Message Search End here
+		});
 		
-	});
+		$(window).resize(function(){
+			$('#message-center-wrapper').css('min-height', $(document).height());
+		})
 })(jQuery);
 
 $(window).load(function(){
@@ -852,3 +963,18 @@ $(window).load(function(){
 	$('.select .options').jScrollPane({autoReinitialise:true});
 	//Custom Select Scroll Function End Here
 });
+
+//Getting URL Parameters 
+function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}  
