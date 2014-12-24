@@ -361,11 +361,6 @@ span.small{ font-size:12px; vertical-align:text-bottom; color:#eaeaea}
 .rightMessage li:last-child a >i{margin-bottom:30px;}
 .rightMessage li .time{margin-bottom:4px; display:block;}
 .rightMessage li a.trackIt > i{margin-bottom:25px;}
-/*.rightMessage li a{background:url(../images/right-message.png) no-repeat scroll 0 0; font-size:0; display:block; width:62px; height:64px;}
-.rightMessage li a.trackIt{background-position:0 -74px;}
-.rightMessage li a.letTalk{background-position:0 -145px;}
-*/
-
 /*Message Section Css End */
 
 /* Header */
@@ -576,15 +571,10 @@ footer{display:block; width:100%;}
 .tableWrapper{height:743px;}
 .orderWrapper .orderTable{max-width:695px; width:100%;}
 .orderWrapper .orderTable tr:last-child table{margin-bottom:0;}
-/*.orderWrapper .orderTable thead td{color:#1e3163; font-size:12px;}
-.orderWrapper .orderTable thead td:first-child{padding-left:22px}
-*/.orderWrapper .orderTable > tbody > tr > td{ vertical-align:middle; background-color:none; margin-bottom:5px; width:100%; }
+.orderWrapper .orderTable > tbody > tr > td{ vertical-align:middle; background-color:none; margin-bottom:5px; width:100%; }
 .orderWrapper .orderTable table tr td img {display:inline-block; vertical-align:-3px; margin:0 5px 0 2px;}
 .orderWrapper .orderTable table tr td:first-child img {margin:0 13px 0 2px; vertical-align:-6px;}
 .orderWrapper .orderTable table tr td:last-child img {vertical-align:top;}
-/*.orderWrapper .orderTable tbody tr td:nth-of-type(2){position:relative; padding-left:27px;}
-.orderWrapper .orderTable tbody tr td:nth-of-type(2) img{position:absolute; max-width:23px; left:0; top:8px;}
-*/
 .orderWrapper .orderTable thead tr,.orderWrapper .orderTable tbody tr{line-height:29px; }
 .orderWrapper .orderTable tbody tr{color:#fff; position:relative;}
 .orderWrapper .orderTable tbody tr.Clicked{z-index:3}
@@ -682,7 +672,7 @@ footer{display:block; width:100%;}
 .custom-select .styledSelect {padding:0 8px;}
 .custom-select .styledSelect:after {content:""; background:url("../images/select_arrow1.png") no-repeat right; width:15px; height:8px; display:block; position: absolute; right:8px; top:8px; }
 .custom-select .styledSelect:active, .styledSelect.active {background-color:none;}
-.custom-select .options {display:none; position:absolute; top:100%; right:0; left:0; z-index:999; margin:0 0; padding:0 0; list-style:none; border:1px solid #ccc; background-color:rgba(0,0,0,0.74); -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2); -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2); box-shadow:0 1px 2px rgba(0, 0, 0, 0.2); border-color:rgba(0,0,0,0.74);}
+.custom-select .options {display:none; position:absolute; top:100%; right:0; left:0; z-index:999; margin:0 0; padding:0 0; list-style:none; border:1px solid #ccc; background:#000; -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2); -moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2); box-shadow:0 1px 2px rgba(0, 0, 0, 0.2); border-color:rgba(0,0,0,0.74);}
 .non-conformance > li > div .options li,  .addorder .options li, .tradis-supplies .options li,.collectionType .options li, .product-collection .custom-select .options li, .nonConformance-list .options li{border-bottom:black; padding:8px 6px!important; font-size:18px; line-height:normal;}
 .addorder .options li, .tradis-supplies .options li, .popUp-closeTicket .options li{color:#fff; padding:4px 6px!important}
 .custom-select .options li {padding:0 6px; margin:0;}
@@ -1134,19 +1124,24 @@ opacity: 0; z-index: 2;  height:100%; width:100%; cursor:pointer;}
 .icon-financial:before{background-position:-53px -1148px; width:27px; height:40px; top:-40px; left:-12px;}
 .icon-financial{padding-left:20px!important;}
 .recent-activity{background:#e5e5e5; padding:10px 0 100px 0;}
-.recent-activity .row, .financial-detail>.container>.row{padding:0 30px;}
-.financial-table table{margin-bottom:4px;}
+.financial-table table tr{margin-bottom:4px; display:table; width:100%;}
 .financial-table tr th{font-size:16px; font-weight:normal;}
-.financial-table tr th, .financial-table table td, .financial-popup .invoice-detail th, .financial-popup .invoice-detail td, .financial-popup .debit-detail td, .financial-popup .debit-detail th{text-align:left; padding:10px 20px; color:#274274;}
+.financial-table tr th, .financial-table table td, .financial-popup .invoice-detail th, .financial-popup .invoice-detail td, .financial-popup .debit-detail td, .financial-popup .debit-detail th{text-align:left; padding:8px 20px; color:#274274;}
 .financial-table table td a{color:#274274;}
 .financial-table table td{font-size:23px;}
-.financial-table tr:nth-child(even) table td{background:#ffffff;}
-.financial-table tr:nth-child(odd) table td{background:#f6f8fa;}
+.financial-table tr:nth-child(even) table td{background:#f6f8fa;}
+.financial-table tr table tr td:first-child{background:none!important;}
+.financial-table tr table tr:nth-child(2n+1) td{background:#fff;}
 
-.financial-table table td:first-child, .financial-table  tr th:first-child{width:18%;}
+.financial-table .icheckbox_square-blue{background:url(../images/financial-checkbox.png) no-repeat scroll center right; height:23px; width:23px;}
+.financial-table .icheckbox_square-blue { background-position: 0 0; }
+.financial-table .icheckbox_square-blue.checked { background-position: -23px 0; }
+.financial-table .vertical-scroll{height:440px;}
+.financial-table table td:first-child, .financial-table  tr th:first-child{width:3%; padding:0;}
 .financial-table table td:nth-of-type(2), .financial-table  tr th:nth-of-type(2){width:18%;}
-.financial-table table td:nth-of-type(3), .financial-table  tr th:nth-of-type(3){width:38%;}
-.financial-table table td:nth-of-type(4), .financial-table  tr th:nth-of-type(4){width:15%; text-align:right;}
+.financial-table table td:nth-of-type(3), .financial-table  tr th:nth-of-type(3){width:18%;}
+.financial-table table td:nth-of-type(4), .financial-table  tr th:nth-of-type(4){width:36%;}
+.financial-table table td:nth-of-type(5), .financial-table  tr th:nth-of-type(5){width:14%; text-align:right; padding-right:0;}
 .financial-table table td:last-child, .financial-table  tr th:last-child{text-align:right;}
 .financial-table .icon{width:26px; height:26px; border:#274274 solid 2px; line-height:22px; font-size:17px; float:left; margin:0 8px 0 0;}
 .financial-table .icon, .financial-detail .tabs li a span{border-radius:50%; display:inline-block; text-align:center; }
@@ -1161,15 +1156,17 @@ opacity: 0; z-index: 2;  height:100%; width:100%; cursor:pointer;}
 .financial-detail .tabs li a.active, .financial-detail .tabs li a.active span, .financial-detail .tabs li a:hover, .financial-detail .tabs li a:hover span{color:#fff;}
 .financial-detail .tabs li a.active span, .financial-detail .tabs li a:hover span{border-color:#fff;}
 
-.invoice-table table td:nth-of-type(2), .invoice-table  tr th:nth-of-type(2){width:22%;}
+.invoice-table table td:nth-of-type(2), .invoice-table  tr th:nth-of-type(2){width:17%;}
 .invoice-table table td:nth-of-type(3), .invoice-table  tr th:nth-of-type(3){width:20%;}
-.invoice-table table td:nth-of-type(4), .invoice-table  tr th:nth-of-type(4){width:15%; text-align:left;}
-.invoice-table table td:nth-of-type(5), .invoice-table  tr th:nth-of-type(5){width:14%; text-align:right;}
+.invoice-table table td:nth-of-type(4), .invoice-table  tr th:nth-of-type(4){width:18%;}
+.invoice-table table td:nth-of-type(5), .invoice-table  tr th:nth-of-type(5){width:14%; text-align:left;}
+.invoice-table table td:nth-of-type(6), .invoice-table  tr th:nth-of-type(6){width:14%; text-align:right;}
 
-.debit-table table td:first-child, .debit-table  tr th:first-child{width:22%;}
-.debit-table table td:nth-of-type(2), .debit-table  tr th:nth-of-type(2){width:26%;}
+
+.debit-table table td:nth-of-type(2), .debit-table  tr th:nth-of-type(2){width:22%;}
 .debit-table table td:nth-of-type(3), .debit-table  tr th:nth-of-type(3){width:26%;}
-.debit-table table td:nth-of-type(4), .debit-table  tr th:nth-of-type(4){width:14%; text-align:right;}
+.debit-table table td:nth-of-type(4), .debit-table  tr th:nth-of-type(4){width:22%;}
+.debit-table table td:nth-of-type(5), .debit-table  tr th:nth-of-type(5){width:14%; text-align:right;}
 
 .credit-table table td:nth-of-type(2), .credit-table  tr th:nth-of-type(2){width:20%;}
 .credit-table table td:nth-of-type(3), .credit-table  tr th:nth-of-type(3){width:22%;}
@@ -1239,66 +1236,3 @@ opacity: 0; z-index: 2;  height:100%; width:100%; cursor:pointer;}
 .wrin  .ui-autocomplete li a{font-size:13px;}
 .wrin  .ui-autocomplete .ui-menu-item{padding:15px 0.4em 10px;}/**** Auto Complete End **/
 
-/** OilPickup Popup CSS Start **/
-.oilpickup{padding:20px 44px;}
-.oilpickup h1{color:#1d3362; letter-spacing:-1px; margin-bottom:10px;}
-.oilpickup .select { width:74px; height:auto;}
-.oilpickup .styledSelect{font-size:24px;}
-.oilpickup .styledSelect:after{top:9px;}
-.btn-grey{background-color:#b7bdc9!important;}
-.oilpickup .date-status{margin:15px 0 55px 0;}
-.oilpickup .date-status span{display:inline-block; margin:0 30px 0 0;}
-.oilpickup .date-status span i{ width:15px; height:9px; margin:0 3px 0 0; display:inline-block;}
-.oilpickup .date-status .already-scheduled i{background:#ffcf9a;}
-.oilpickup .date-status .already-scheduled{color:#ffcf9a;}
-.oilpickup .date-status .available-dates i{background:#b7bdc9;}
-.oilpickup .date-status .available-dates{color:#b7bdc9;}
-.mrgRight25{margin-right:25px;}
-.oilpickup .btn{padding:10px 20px; text-transform:uppercase;}
-
-/*
-#full-year { position:relative; width:600px; margin:30px 0 0 0; }
-#full-year .ui-widget-content { border: 1px solid #fff; background: #fff; color: #1f1f1f; }
-#full-year .ui-widget-header { border: 1px solid #fff; background:#fff; color: #231f20; }
-#full-year .ui-datepicker-multi-2 .ui-datepicker-group { width:50%; border-left:#cecece solid 1px; box-sizing:border-box; float:left; }
-
-#full-year  .ui-datepicker table {width:100%; font-size: .75em; border-collapse:collapse; margin:0 0 .4em; }
-#full-year  .ui-datepicker table thead { display:none; }
-#full-year  .ui-datepicker th {padding: .7em .3em; text-align: center; border:0; }
-#full-year  .ui-datepicker td {border:0; padding:1px;}
-#full-year  .ui-datepicker td span, #full-year .ui-datepicker td a {display: block; padding:5px; text-align:center; text-decoration:none; }
-
-#full-year  .ui-datepicker .ui-datepicker-prev, #full-year .ui-datepicker .ui-datepicker-next { position:absolute; top:50%; width: 23px; height:42px; margin:-21px 0 0 0; }
-#full-year  .ui-datepicker .ui-datepicker-prev { left:-33px; }
-#full-year  .ui-datepicker .ui-datepicker-next { right:-30px; }
-#full-year  .ui-datepicker table {width: 100%; font-size:.75em; border-collapse:collapse; margin:0 0 .4em; }
-#full-year  .ui-datepicker table thead {display:none;}
-#full-year  .ui-datepicker .ui-datepicker-title {margin:0 10px; line-height: 1.8em; text-align:left; font-size:13px; font-weight:normal; }
-#full-year  .ui-state-default, #full-year .ui-widget-content .ui-state-default, #full-year .ui-widget-header .ui-state-default { border: 1px solid #fff; background: #fff; color: #231f20; font-weight:normal; }
-#full-year  .ui-state-active, #full-year .ui-widget-content .ui-state-active, #full-year .ui-widget-header .ui-state-active { border: 1px solid #ffcf9a; background: #ffcf9a!important; }
-#full-year .ui-state-highlight, #full-year .ui-state-highlight a{background:#ffcf9a !important; border-color:#ffcf9a !important}
-#full-year .ui-datepicker-current-day, #full-year .ui-datepicker-current-day a.ui-state-default{background:#b7bdc9 !important; border-color:#b7bdc9 !important}
-#full-year .ui-datepicker-today, #full-year .ui-datepicker-today a.ui-state-default{background:#009dfd!important; border-color:#009dfd!important;}
-#full-year .ui-widget-header .ui-icon { background-image:url(../images/icon-sprit.png); }
-#full-year .ui-datepicker .ui-datepicker-prev span, #full-year .ui-datepicker .ui-datepicker-next span { display: block; height:42px; width:23px;}
-#full-year .ui-icon-circle-triangle-w {background-position: -5px -836px;}
-#full-year .ui-icon-circle-triangle-e {background-position: -5px -794px;}
-#full-year .ui-state-hover{background:none; border:0;}
-#full-year .ui-state-disabled{opacity:1;}
-*/
-/** OilPickup Popup CSS End **/
-
-
-/** Footer Calendar Custom **/
-.oil-pickup-calendar { margin:30px 0 0; position:relative; }
-.oil-pickup-calendar .datepicker-prev, .oil-pickup-calendar .datepicker-next { position:absolute; top:50%; width: 23px; height:42px; margin:-21px 0 0 0; background:url(../images/icon-sprit.png); text-indent:-999px; overflow:hidden; }
-.oil-pickup-calendar .datepicker-prev {background-position: -5px -836px; left:-34px;}
-.oil-pickup-calendar .datepicker-next {background-position: -5px -794px; right:-24px;}
-.oil-pickup-calendar .date-picker { width:50%; float:left; border-left:1px solid #cecece; box-sizing:border-box; padding:0 15px 0 0; }
-.oil-pickup-calendar .date-picker .datepicker-month { margin:0 10px 25px; }
-.oil-pickup-calendar .date-picker .datepicker-month, .oil-pickup-calendar .date-picker td a { color:#231f20; font-size:13px; }
-.oil-pickup-calendar .date-picker td a { padding:10px 8px; text-align:center; display:block; margin-bottom:5px; }
-.oil-pickup-calendar .date-picker a.already-scheduled { background:#ffcf9a; }
-.oil-pickup-calendar .date-picker a.already-pickedup { background:#b7bdc9; }
-
-/** Footer Calendar Custom End **/

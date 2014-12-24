@@ -1,7 +1,7 @@
 /* iCheck plugin Square skin, blue
 ----------------------------------- */
 .icheckbox_square-blue, .iradio_square-blue { display: inline-block;  *display: inline;
-vertical-align: middle; margin: 0; padding: 0; width:35px; height:35px; background:url(../images/custom-checkbox.png) no-repeat scroll center right; no-repeat;
+vertical-align: middle; margin: 0; padding: 0; width:35px; height:35px; background:url(../images/custom-checkbox.png) no-repeat scroll center right;
 border: none; cursor: pointer; }
 .icheckbox_square-blue { background-position: 0 0; }
 .icheckbox_square-blue.checked { background-position: -35px 0; }
