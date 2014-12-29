@@ -1,0 +1,21 @@
+<script>
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+		//alert('scfv');
+		jQuery('body').css({'overflow' :'auto'});
+	});
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+</script>
+
+<div class="popUp-Blue">
+    <h2 class="semiBold">Item flagged.</h2>
+    <p>We’ll review your request and get back to you shortly.</p>
+    <div  class="popUp-Blue-detail">
+        <small>Order.7281172 12:34pm 06.0814</small>
+        <p>200068 Chicken Nuggets White<br>
+        24 Boxes 2264 ind</p>
+    </div>
+</div>

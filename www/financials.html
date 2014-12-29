@@ -17,7 +17,7 @@
 </head>
 <body class="financials">
 <!--Desktop Section -->
-<div class="bodyWrapper body desktopWrapper">
+<div class="bodyWrapper body">
   <div class="bodyOpacityData"></div>
   <!-- Message Alert -->
   <section class="messageAlert-Wrapper">
@@ -191,15 +191,21 @@
       <div class="row">
         <table class="financial-table">
           <tr>
-            <th><input type="checkbox"></th>
-            <th>Number</th>
-            <th>Date</th>
-            <th>Description</th>
-            <th>Debit / Credit</th>
-            <th>&nbsp;</th>
+            <td><div class="row-top">
+                <table>
+                  <tr>
+                    <th><input type="checkbox"></th>
+                    <th>Number</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Debit / Credit</th>
+                    <th>&nbsp;</th>
+                  </tr>
+                </table>
+              </div></td>
           </tr>
           <tr>
-            <td colspan="6"><div class="scroll-pane vertical-scroll">
+            <td><div class="scroll-pane vertical-scroll">
                 <table>
                   <tr>
                     <td><input type="checkbox"></td>
@@ -284,7 +290,7 @@
       </div>
     </div>
   </section>
-  <section class="row financial-detail">
+  <section class="row financial-detail"> 
     <div class="container">
       <div class="row">
         <div class="row fd-tab mrgBottom10">
@@ -429,7 +435,7 @@
                   </table></td>
               </tr>
             </table>
-            <div class="row download-selected"> <span class="semiBold pull-left">Download<br>
+            <div class="row download-selected"> <span class="semiBold pull-left clr-white">Download<br>
               Selected</span>
               <div class="pull-left mrgTop5"><a href="#" class="download">PDF</a><a href="#" class="download">CSV</a></div>
             </div>
@@ -601,7 +607,7 @@
                   </table></td>
               </tr>
             </table>
-            <div class="row download-selected"> <span class="semiBold pull-left">Download<br>
+            <div class="row download-selected"> <span class="semiBold pull-left clr-white">Download<br>
               Selected</span>
               <div class="pull-left mrgTop5"><a href="#" class="download">PDF</a><a href="#" class="download">CSV</a></div>
             </div>
@@ -914,7 +920,7 @@
                   </table></td>
               </tr>
             </table>
-            <div class="row download-selected"> <span class="semiBold pull-left">Download<br>
+            <div class="row download-selected"> <span class="semiBold pull-left clr-white">Download<br>
               Selected</span>
               <div class="pull-left mrgTop5"><a href="#" class="download">PDF</a><a href="#" class="download">CSV</a></div>
             </div>
@@ -1097,7 +1103,7 @@
               <li><a href="javascript:;" title="Order Success">Order Success</a></li>
               <li><a href="non-conformance.html" title="Non-Conformance">Non-Conformance</a></li>
               <li><a href="tradis.html" title="Tardis">TARDIS</a></li>
-              <li><a href="financials.html" title="Financials">Financials</a></li>
+              <li><a href="financials.html" title="Financials" class="active">Financials</a></li>
               <li><a href="ops-supply.html" title="Ops Supply">Ops Supply</a></li>
               <li><a href="how-we-do.html" title="How We Do It">How We Do It</a></li>
               <li> <a href="javascript:;" title="Let's Talk" class="let_talk">Let’s Talk</a>
@@ -1123,93 +1129,7 @@
   </footer>
 </div>
 <!--Desktop Section End --> 
-<!-- Mobile Section -->
-<div class="mobBodyWrapper mbpaddingTop38"> <a href="javascript:;" class="mMenu">Menu Icon</a>
-  <nav class="mobNavigation">
-    <header> <a href="javascript:;" class="menuClose"><i class="icon-mob-close">Close</i></a>
-      <div class="row">
-        <div class="pull-left custom-select">
-          <select name="store" id="store">
-            <option value="Store">Store</option>
-            <option value="Store2">Store2</option>
-          </select>
-          <p class="clr-white"><span class="semiBold">561</span> Jarman Park</p>
-        </div>
-        <div class="pull-right text-right">
-          <p class="semiBold">Rank</p>
-          <p class="clr-white"><sup>#</sup><span class="semiBold">301</span> of 1300</p>
-        </div>
-      </div>
-    </header>
-    <div class="navList">
-      <ul class="mobHood">
-        <li><a href="order.html" title="Orders">Orders</a></li>
-        <li><a href="javascript:;" title="Non-Conformance">Non-Conformance</a></li>
-        <li><a href="javascript:;" title="Collections">Collections</a></li>
-        <li><a href="javascript:;" title="TARDIS">TARDIS</a></li>
-        <li></li>
-      </ul>
-    </div>
-    <div class="mob-letsTack"> <a href="javascript:;" class="semiBold" title="LET’S TALK">LET’S TALK</a> </div>
-    <footer>
-      <p><span class="semiBold">Welcome Back Jim</span> |  log out</p>
-      <div class="footer-fixed-small"> <img class="img-responsive" src="images/mob/mb-sync-mob.jpg" alt="" />
-        <div class="footer-fixed-text">
-          <h5>Sync.</h5>
-        </div>
-      </div>
-    </footer>
-  </nav>
-  <!-- Message Alert -->
-  <section class="messageAlert-Wrapper">
-    <div class="messageHeading orderHeading"> <a href="index.html" class="mob-Heading">MB<span class="semiBold clr-white">Sync</span></a> </div>
-  </section>
-  <!-- Message Alert End -->
-  <div class="mob-Body">
-    <section class="row orderViewByDate">
-      <div class="pull-left orderViewByDate-Panel"><a href="order.html">06.08.14 <span>Ready for viewing</span></a></div>
-      <div class="pull-right orderViewByDate-Panel"><a href="order-intransit.html" class="clr-warning">05.08.14<span class="clr-white text-right">In transit</span></a></div>
-    </section>
-    <section class="orderStatus-Wrapper row">
-      <div class="row posRelative">
-        <div class="order-dateSection">
-          <p class="semiBold">Order: <span class="fnt-14 text-regular">7281172</span></p>
-          <h4 class="semiBold">05.08.14</h4>
-        </div>
-        <a class="clr-warning fnt-16 clr posAbsolute trackItMob" href="javascript:;">TRACK IT</a>
-        <p class="icon-yellow-large order-StatusSection semiBold"><span class="fnt-14">Order Status</span><br>
-          In transit <small class="clr-grey1 disIn-Block fnt-18">15.21</small> </p>
-      </div>
-    </section>
-    <section class="row orderFilterDiv">
-      <ul class="orderFilterList">
-        <li><a class="active" href="javascript:;">Fronzen</a></li>
-        <li><a href="javascript:;">Chilled</a></li>
-        <li><a href="javascript:;">Dry-Buns</a></li>
-        <li><a href="javascript:;">Dry</a></li>
-        <li>
-          <label class="search-icon">
-            <input type="text" placeholder="Search by Item. MRI. etc." name="search">
-          </label>
-        </li>
-      </ul>
-    </section>
-    <section class="row mob-ordertable">
-      <ul class="orderTableMob">
-        <li> <span>MRI</span> <span>Product</span> <span>Bulk / Individual</span> </li>
-        <li> <span>10006</span> <span>Muffins-Frozen</span> <span>2c/72</span> </li>
-        <li> <span>10016</span> <span>Buns-5 Inch Seeded</span> <span>2c/20</span> </li>
-        <li> <span>10018</span> <span>Buns-Bacon Roll</span> <span>2c/60</span> </li>
-        <li> <span>10020</span> <span>Roll-Premium Brown</span> <span>2c/60</span> </li>
-        <li> <span>10037</span> <span>Roll-Tds</span> <span>2c/54</span> </li>
-        <li> <span>20001</span> <span>Pie-Apple Diced</span> <span>1c/140</span> </li>
-        <li> <span>20005</span> <span>Sausage-Patty</span> <span>1c/218</span> </li>
-        <li> <span>20007</span> <span>Chicken Patty</span> <span>2c/192</span> </li>
-      </ul>
-    </section>
-  </div>
-</div>
-<!--Mobile Section End --> 
+
 <!-- Scripts --> 
 <script type="text/javascript" src="js/jquery-1.11.1.js"></script> 
 <script  type="text/javascript" src="js/jquery-ui-1.11.1.js"></script> 

@@ -14,7 +14,6 @@
 <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
 <link rel="stylesheet" type="text/css" href="css/colorbox.css" />
 <link rel="stylesheet" type="text/css" href="css/icheck.css" />
-
 </head>
 <body  class="nonConformance" >
 <!--Desktop Section -->
@@ -167,7 +166,7 @@
         <ul class="non-conformance horizontal-only">
           <li>
             <div><span class="number">1</span>
-              <label class="fnt-20">Choose issue type</label>
+              <label class="fnt-20">Issue type</label>
               <div class="custom-select selectIssueType">
                 <select>
                   <option>Product</option>
@@ -180,7 +179,7 @@
             <div><span class="number">2</span>
               <div class="row" id="product-box">
                 <div class="row mwrin">
-                  <label class="fnt-20">MRIN or WRIN</label>
+                  <label class="fnt-20">WRIN</label>
                   <input class="product" placeholder="10018">
                   <input type="hidden" class="product-id">
                   <span class="product-description fnt-16">Buns-Bacon Roll</span> </div>
@@ -309,6 +308,12 @@
       <div class="row ticketList">
         <div class="pull-left">
           <h3>Ticket <span class="semiBold">list</span></h3>
+        </div>
+        <div class="ticket-tab">
+          <ul>
+            <li><a href="javascript:void(0);">Open</a> </li>
+            <li><a href="javascript:void(0);" class="active">Closed</a></li>
+          </ul>
         </div>
         <div class="pull-right"> <a href="popUp/close-ticket-popUp.html" class="ajax">DOWNLOAD REPORT</a> </div>
       </div>
@@ -442,17 +447,16 @@
             <p class="footer-transform">COLLECTIONS</p>
             <p class="footer-text">Have Something needing <br>
               to be collected/credited?</p>
-            <h3 class="semiBold">Schedule a Pick-Up/Credit.</h3>
+            <h3 class="semiBold">Request a Collection/Credit.</h3>
             <div class="custom-select row">
               <div class="row collectionType">
                 <select>
                   <option>Collection Type</option>
-                  <option>Cardboard</option>
-                  <option>Cooking Oil</option>
+                  <option>Packaging Collection</option>
                   <option>Product Collection</option>
                 </select>
               </div>
-              <div class="product-collection">
+              <div class="product-collection productCollection">
                 <div class="row product-row mrgBottom15">
                   <div class="pull-left mwrin wrin">
                     <label class="fnt-17">WRIN</label>
@@ -497,42 +501,92 @@
                   </div>
                   <a href="javascript:;" class="btnSubmitCollection btn-blue btn-radius10 btn-paddding10 fnt-20 semiBold  disIn-Block pull-right">SUBMIT FOR COLLECTION</a> </div>
               </div>
-              <div class="row collectionType-Details cardboardPickUp" >
-                <div class="pull-left">
-                  <p class="dateHeading">Next available date:</p>
-                  <span class="date">03.04.14</span><i class="icons-calendar">Calendar</i> </div>
-                <div class="pull-right"> <a href="popUp/collection-scheduled-popUp.html" class="btn-blue btn-radius10 btn-paddding10 fnt-20 semiBold mrgTop10 disBlock ajax">SUBMIT FOR COLLECTION</a> </div>
-              </div>
-              <div class="row collectionType-Details cookingOil">
-                <div class="row nextSchedule">
-                  <div class="pull-left">
-                    <p class="fnt-16">Your next scheduled oil pickup is on <span class="semiBold" id="calDate">03.01.14.</span></p>
+              <div class="packagingCollection product-collection">
+                <div class="row product-row mrgBottom15">
+                  <div class="pull-left mwrin wrin pwrin">
+                    <label class="fnt-17">WRIN</label>
+                    <input class="packaging-bottom" placeholder="082857">
+                    <input type="hidden" class="packaging-id-bottom">
+                    <span class="fnt-15 packaging-description-bottom">CHICKEN-LEGEND PATTY</span> </div>
+                  <div class="custom-select">
+                    <select>
+                      <option>Reason For Collection</option>
+                      <option>Picked incorrectly</option>
+                      <option>Damaged</option>
+                      <option>Other</option>
+                    </select>
                   </div>
-                  <div class="pull-right">
-                    <p class="fnt-16 semiBold"><a href="javascript:void();" class="clr-warning">Cancel or reschedule?</a></p>
+                  <div class="custom-select double-selectBotm">
+                    <div class="double-select">
+                      <div class="double-select-left pull-left">
+                        <select>
+                          <option>Qty.</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                      <div class="double-select-Right pull-left">
+                        <select>
+                          <option>Units</option>
+                          <option>Case</option>
+                          <option>Box</option>
+                          <option>Ind.</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="row">
-                  <ul class="detailCalendar">
-                    <li><span></span>Aready scheduled</li>
-                    <li><span class="bg-grey"></span>Avallable pickup dates</li>
-                  </ul>
-                  <p class="semiBold fnt-14 clr-primary posRelative">Schedule an additional pickup?<a href="popUp/oil-pickup-popUp.html" class="datapickerajax"><i class="icons-calendar" >Calendar</i></a> </p>
-                </div>
+                <div class="row request-credit"> <a href="javascript:;" class="btnSubmitCollection btn-blue btn-radius10 btn-paddding10 fnt-20 semiBold  disIn-Block pull-right">SUBMIT FOR COLLECTION</a> </div>
               </div>
+            </div>
+            <div class="request-activity row">
+              <p class="fnt-14 mrgBottom15">Request Activity</p>
+              <p>
+              <ul>
+                <li><a href="javascript:void(0);"><i class="icon-request-collection"></i>product<br>
+                  collection<br>
+                  requested</a></li>
+                <li><a href="javascript:void(0);"><i class="icon-request-pickUp"></i>product<br>
+                  collection<br>
+                  requested</a></li>
+                <li><a href="javascript:void(0);" class="packaging-request-on"><i class="icon-request-collection"></i>packaging<br>
+                  pick-up<br>
+                  requested </a>
+                  <div class="request-on packaging-box"> <span class="head semiBold">Packaging 
+                    Collection
+                    Requested<i class="icon-package-collection"></i></span> <span>on:<br>
+                    <span class="largeText semiBold">07.08.14</span></span> <span>by:<br>
+                    <span class="largeText fnt-21 semiBold">J.Johnson</span></span> <a href="javascript:void(0);" class="semiBold">View<br>
+                    Communication</a> </div>
+                </li>
+                <li><a href="javascript:void(0);" class="product-request-on"><i class="icon-request-pickUp"></i>product<br>
+                  collection<br>
+                  requested</a>
+                  <div class="request-on product-box"> <span class="head semiBold">Product 
+                    Collection
+                    Requested<i class="icon-product-collection"></i></span> <span>on:<br>
+                    <span class="largeText semiBold">08.08.14</span></span> <span>by:<br>
+                    <span class="largeText fnt-21 semiBold">J.Johnson</span></span> <a href="javascript:void(0);" class="semiBold">View<br>
+                    Communication</a> </div>
+                </li>
+              </ul>
+              </p>
             </div>
           </div>
           <div class="footer-panel footer-panelRight pull-right text-right" id="footerMyTeam">
             <p class="footer-transform">MY TEAM</p>
             <p class="footer-text">Need Some Help?</p>
             <ul class="myTeamList">
-              <li> <img src="images/img-daryl.png" class="img-responsive" alt="Daryl" />
+              <li> <img src="images/andy-scanion.jpg" class="img-responsive" alt="Daryl" />
                 <div class="teamDetail"> <span>Your Planner</span>
-                  <h4 class="semiBold">Daryl Olney </h4>
+                  <h4 class="semiBold">Andy Scanion </h4>
                   <p>Sr. Planner MartinBrower</p>
                   <a href="popUp/team-profile-popUp.html" class="semiBold ajax">Learn More</a> <a href="javascript:;" class="semiBold">Send Daryl A Message</a> </div>
               </li>
-              <li> <img src="images/jenna.png" class="img-responsive" alt="jenna" />
+              <li> <img src="images/jenna.jpg" class="img-responsive" alt="jenna" />
                 <div class="teamDetail"> <span>Your Regional Customer Service Manager</span>
                   <h4 class="semiBold">Jenna Holmes</h4>
                   <p>Sr. Field Manager MartinBrower</p>
@@ -546,10 +600,9 @@
     <div class="footer-fixed">
       <div class="container">
         <div class="row">
-          <div class="footer-fixed-small"> <img class="img-responsive" src="images/mb-logo-footer.jpg" alt="" />
+          <div class="footer-fixed-small"> <img class="img-responsive" src="images/mb-logo-footer.gif" alt="" />
             <div class="footer-fixed-text">
-              <p><span class="semiBold">Welcome Back Jim</span> |  log out</p>
-              <h5> Sync. </h5>
+              <p><span class="semiBold">Welcome Back Jim</span> <span>|</span> <a href="javascript:void(0);">log out</a></p>
             </div>
           </div>
           <div class="footer-fixed-large pull-right">
@@ -557,7 +610,7 @@
               <li><a href="order.html" title="Orders">Orders</a></li>
               <li><a href="calendar.html" title="Calendar">Calendar</a></li>
               <li><a href="javascript:;" title="Order Success">Order Success</a></li>
-              <li><a href="non-conformance.html" title="Non-Conformance">Non-Conformance</a></li>
+              <li><a href="non-conformance.html" title="Non-Conformance" class="active">Non-Conformance</a></li>
               <li><a href="tradis.html" title="Tardis">TARDIS</a></li>
               <li><a href="financials.html" title="Financials">Financials</a></li>
               <li><a href="ops-supply.html" title="Ops Supply">Ops Supply</a></li>
@@ -566,11 +619,11 @@
                 <div class="letpopup">
                   <h3 class="semiBold">Contact<br>
                     Your Planner</h3>
-                  <h4 class="semiBold">Daryl Olney</h4>
+                  <h4 class="semiBold">Andy Scanion</h4>
                   <span>Sr. Planner MartinBrower</span>
                   <ul class="listNumber">
                     <li><i class="icon-phone">icon Phone</i>+44(0) 7791 646416</li>
-                    <li><i class="icon-messagebox">icon Phone</i>DOlney@martinbrower.com</li>
+                    <li><i class="icon-messagebox">icon Phone</i><a href="mailto:AScanino@martinbrower.com">AScanino@martinbrower.com</a></li>
                   </ul>
                   <textarea class="let_comment" placeholder="Send Daryl a message right from here."></textarea>
                   <p class="disIn-Block semiBold fnt-10">Other Important Numbers</p>
@@ -586,182 +639,172 @@
 </div>
 <!--Desktop Section End --> 
 <!-- Mobile Section -->
-<div class="mobBodyWrapper mbpaddingTop38">
-  <a href="javascript:;" class="mMenu">Menu Icon</a>
+<div class="mobBodyWrapper mbpaddingTop38"> <a href="javascript:;" class="mMenu">Menu Icon</a>
   <nav class="mobNavigation">
-      <header>
-          <a href="javascript:;" class="menuClose"><i class="icon-mob-close">Close</i></a>
-          <div class="row">
-              <div class="pull-left custom-select">
-                  <select name="store" id="store">
-                      <option value="Store">Store</option>
-                      <option value="Store2">Store2</option>
-                  </select>
-                  <p class="clr-white"><span class="semiBold">561</span> Jarman Park</p>
-              </div>
-              <div class="pull-right text-right">
-                  <p class="semiBold">Rank</p>
-                  <p class="clr-white"><sup>#</sup><span class="semiBold">301</span> of 1300</p>
-              </div>
-          </div>
-      </header>
-      <div class="navList"><ul class="mobHood">
-          <li><a href="order.html" title="Orders">Orders</a></li>
-          <li><a href="non-conformance.html" title="Non-Conformance">Non-Conformance</a></li>
-          <li><a href="collections.html" title="Collections">Collections</a></li>
-          <li><a href="tradis.html" title="TARDIS">TARDIS</a></li>
-          <li></li>
-      </ul></div>
-      <div class="mob-letsTack">
-          <a href="javascript:;" class="semiBold letsTalk" title="LET’S TALK">LET’S TALK</a>
-          <div class="letsTale-Content">
-              <ul class="navProfileMob">
-                  <li>
-                      <div>
-                          <div class="profileDescMob">
-                              <div class="imgDescription">
-                                  <h3 class="semiBold">Daryl Olney</h3>
-                                  <h4>Your Sr. Planner MartinBrower</h4>
-                              </div>
-                              <img src="images/mob/daryl-olney-mob.png" class="img-responsive" title="Daryl Olney" alt="Daryl Olney" />
-                          </div>
-                          <ul class="profileContDetail mrgBottom10">
-                              <li>E: <a href="mailto:Daryl.Olney@martinbrower.com" title="Daryl.Olney@martinbrower.com">Daryl.Olney@martinbrower.com</a></li>
-                              <li>P: <a href="tel:(646) 761-2148" title="(646) 761-2148">(646) 761-2148</a></li>
-                              <li>F: <a href="javascript:;" title="(646) 761-2147">(646) 761-2147</a></li>
-                          </ul>
-                      </div>
-                  </li>
-                  <li>
-                      <div>
-                          <div class="profileDescMob">
-                              <div class="imgDescription">
-                                  <h3 class="semiBold">Jenna Holmes</h3>
-                                  <h4>Your Sr. Field Manager MartinBrower</h4>
-                              </div>
-                              <img src="images/mob/jenna-holmes-mob.png" class="img-responsive" title="Jenna Holmes" alt="Jenna Holmes" />
-                          </div>
-                          <ul class="profileContDetail mrgBottom10">
-                              <li>E: <a href="mailto:jenna.homes@martinbrower.com" title="jenna.homes@martinbrower.com">jenna.homes@martinbrower.com</a></li>
-                              <li>P: <a href="tel:(646) 761-2148" title="(646) 761-2148">(646) 761-2148</a></li>
-                              <li>F: <a href="javascript:;" title="(646) 761-2147">(646) 761-2147</a></li>
-                          </ul>
-                      </div>
-                  </li>
-                  
-              </ul>
-          </div>
+    <header> <a href="javascript:;" class="menuClose"><i class="icon-mob-close">Close</i></a>
+      <div class="row">
+        <div class="pull-left custom-select">
+          <select name="store" id="store">
+            <option value="Store">Store</option>
+            <option value="Store2">Store2</option>
+          </select>
+          <p class="clr-white"><span class="semiBold">561</span> Jarman Park</p>
+        </div>
+        <div class="pull-right text-right">
+          <p class="semiBold">Rank</p>
+          <p class="clr-white"><sup>#</sup><span class="semiBold">301</span> of 1300</p>
+        </div>
       </div>
-      <footer>
+    </header>
+    <div class="navList">
+      <ul class="mobHood">
+        <li><a href="order.html" title="Orders">Orders</a></li>
+        <li><a href="non-conformance.html" title="Non-Conformance">Non-Conformance</a></li>
+        <li><a href="collections.html" title="Collections">Collections</a></li>
+        <li><a href="tradis.html" title="TARDIS">TARDIS</a></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="mob-letsTack"> <a href="javascript:;" class="semiBold letsTalk" title="LET’S TALK">LET’S TALK</a>
+      <div class="letsTale-Content">
+        <ul class="navProfileMob">
+          <li>
+            <div>
+              <div class="profileDescMob">
+                <div class="imgDescription">
+                  <h3 class="semiBold">Daryl Olney</h3>
+                  <h4>Your Sr. Planner MartinBrower</h4>
+                </div>
+                <img src="images/mob/daryl-olney-mob.png" class="img-responsive" title="Daryl Olney" alt="Daryl Olney" /> </div>
+              <ul class="profileContDetail mrgBottom10">
+                <li>E: <a href="mailto:Daryl.Olney@martinbrower.com" title="Daryl.Olney@martinbrower.com">Daryl.Olney@martinbrower.com</a></li>
+                <li>P: <a href="tel:(646) 761-2148" title="(646) 761-2148">(646) 761-2148</a></li>
+                <li>F: <a href="javascript:;" title="(646) 761-2147">(646) 761-2147</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="profileDescMob">
+                <div class="imgDescription">
+                  <h3 class="semiBold">Jenna Holmes</h3>
+                  <h4>Your Sr. Field Manager MartinBrower</h4>
+                </div>
+                <img src="images/mob/jenna-holmes-mob.png" class="img-responsive" title="Jenna Holmes" alt="Jenna Holmes" /> </div>
+              <ul class="profileContDetail mrgBottom10">
+                <li>E: <a href="mailto:jenna.homes@martinbrower.com" title="jenna.homes@martinbrower.com">jenna.homes@martinbrower.com</a></li>
+                <li>P: <a href="tel:(646) 761-2148" title="(646) 761-2148">(646) 761-2148</a></li>
+                <li>F: <a href="javascript:;" title="(646) 761-2147">(646) 761-2147</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
       <p><span class="semiBold">Welcome Back Jim</span> |  log out</p>
-          <div class="footer-fixed-small">
-              <img class="img-responsive" src="images/mob/mb-sync-mob.jpg" alt="" />
-              <div class="footer-fixed-text">
-                  
-                  <h5>Sync.</h5>
-              </div>
-          </div>
-      </footer>
+      <div class="footer-fixed-small"> <img class="img-responsive" src="images/mob/mb-sync-mob.jpg" alt="" />
+        <div class="footer-fixed-text">
+          <h5>Sync.</h5>
+        </div>
+      </div>
+    </footer>
   </nav>
   <!-- Message Alert -->
-    <section class="messageAlert-Wrapper">
-        <div class="messageHeading orderHeading">
-            <a href="index.html" class="mob-Heading">MB<span class="semiBold clr-white">Sync</span></a>
-        </div>
-    </section>
-  <!-- Message Alert End --> 
+  <section class="messageAlert-Wrapper">
+    <div class="messageHeading orderHeading"> <a href="index.html" class="mob-Heading">MB<span class="semiBold clr-white">Sync</span></a> </div>
+  </section>
+  <!-- Message Alert End -->
   <div class="mob-Body">
-     <section class="row">
-         <div class="container">
-             <div class="row">
-                 <div class="pull-left">
-                     <h2 class="mobPageHeading padTop15">Non-Conformance</h2>
-                 </div>
-             </div>
-         </div>
-     </section>
-     <section class="row">
-         <ul class="nonConformance-list">
-             <li>
-                 <div>
-                    <div class="row">
-                     <span class="number">1</span>
-                     <label class="fnt-20">Choose issue type</label>
-                    </div>
-                    <div class="row">
-                        <ul class="nonConformance-issueType">
-                            <li><a href="javascript:;" class="active" data-target="product-box-mobile">Product</a></li>
-                            <li class="text-right"><a href="javascript:;" data-target="service-box-mobile">Service</a></li>
-                        </ul>
-                    </div>
-                 </div>
-             </li>
-             <li>
-                 <div>
-                     <div class="row">
-                     <span class="number">2</span>
-                     <label class="fnt-20" id="wrinProdNumber">WRIN or PRODUCT NUMBER</label>
-                    </div>
-                    <div class="row">
-                <div class="row mrgTop20 boxIssueType" id="product-box-mobile">
+    <section class="row">
+      <div class="container">
+        <div class="row">
+          <div class="pull-left">
+            <h2 class="mobPageHeading padTop15">Non-Conformance</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="row">
+      <ul class="nonConformance-list">
+        <li>
+          <div>
+            <div class="row"> <span class="number">1</span>
+              <label class="fnt-20">Choose issue type</label>
+            </div>
+            <div class="row">
+              <ul class="nonConformance-issueType">
+                <li><a href="javascript:;" class="active" data-target="product-box-mobile">Product</a></li>
+                <li class="text-right"><a href="javascript:;" data-target="service-box-mobile">Service</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="row"> <span class="number">2</span>
+              <label class="fnt-20" id="wrinProdNumber">WRIN or PRODUCT NUMBER</label>
+            </div>
+            <div class="row">
+              <div class="row mrgTop20 boxIssueType" id="product-box-mobile">
                 <div class="row pull-right mwrin mwrin-mob text-right mrgBottom15">
                   <input class="autocompleteProduct product-mob" placeholder="10018">
                   <input type="hidden" class="product-id-mob">
                   <span class="fnt-16 mrgTop5 mrgBottom5 product-description-mob" >Buns-Bacon Roll</span> </div>
                 <!-- Custom Select -->
-                   <div class="pull-right custom-select">
-                    <div class="pull-left mrgBottom15">
-                     <label for="delivery-date" class="customSelct-label">Delivery Date</label>
-                      <select name="delivery-date">
-                        <option>Today 28.09.14</option>
-                        <option>Weds 24.09.14</option>
-                        <option>Sat 24.09.14</option>
-                        <option>Thurs 24.09.14</option>
-                        <option>Mon 10.09.14</option>
-                        <option>Thurs 05.09.14</option>
-                        <option>Fri 01.09.14</option>
+                <div class="pull-right custom-select">
+                  <div class="pull-left mrgBottom15">
+                    <label for="delivery-date" class="customSelct-label">Delivery Date</label>
+                    <select name="delivery-date">
+                      <option>Today 28.09.14</option>
+                      <option>Weds 24.09.14</option>
+                      <option>Sat 24.09.14</option>
+                      <option>Thurs 24.09.14</option>
+                      <option>Mon 10.09.14</option>
+                      <option>Thurs 05.09.14</option>
+                      <option>Fri 01.09.14</option>
+                    </select>
+                  </div>
+                  <div class="pull-left mrgBottom15">
+                    <label for="useBy" class="customSelct-label">Use by</label>
+                    <select name="useBy">
+                      <option>Use by 31.09.14</option>
+                      <option>Weds 24.09.14</option>
+                      <option>Sat 24.09.14</option>
+                      <option>Thurs 24.09.14</option>
+                      <option>Mon 10.09.14</option>
+                      <option>Thurs 05.09.14</option>
+                      <option>Fri 01.09.14</option>
+                    </select>
+                  </div>
+                  <div class="pull-left double-select mrgBottom15">
+                    <div class="double-select-left pull-left">
+                      <label for="qty" class="customSelct-label">Qty</label>
+                      <select>
+                        <option>Qty</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
                       </select>
                     </div>
-                    <div class="pull-left mrgBottom15">
-                     <label for="useBy" class="customSelct-label">Use by</label>
-                      <select name="useBy">
-                        <option>Use by 31.09.14</option>
-                        <option>Weds 24.09.14</option>
-                        <option>Sat 24.09.14</option>
-                        <option>Thurs 24.09.14</option>
-                        <option>Mon 10.09.14</option>
-                        <option>Thurs 05.09.14</option>
-                        <option>Fri 01.09.14</option>
+                    <div class="double-select-Right pull-left">
+                      <label for="units" class="customSelct-label">Units</label>
+                      <select>
+                        <option>Units</option>
+                        <option>Case</option>
+                        <option>Box</option>
+                        <option>Ind.</option>
+                        <option>Other</option>
                       </select>
-                    </div>
-                    <div class="pull-left double-select mrgBottom15">
-                      <div class="double-select-left pull-left">
-                       <label for="qty" class="customSelct-label">Qty</label>
-                        <select>
-                          <option>Qty</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                          <option>6</option>
-                        </select>
-                      </div>
-                      <div class="double-select-Right pull-left">
-                       <label for="units" class="customSelct-label">Units</label>
-                        <select>
-                          <option>Units</option>
-                          <option>Case</option>
-                          <option>Box</option>
-                          <option>Ind.</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
                     </div>
                   </div>
-                <!-- Custom Select -->
                 </div>
-                <div class="row date-time custom-select mrgLeft50 boxIssueType" id="service-box-mobile" style="display:none">
+                <!-- Custom Select --> 
+              </div>
+              <div class="row date-time custom-select mrgLeft50 boxIssueType" id="service-box-mobile" style="display:none">
                 <div class="date">
                   <h1>Date</h1>
                   <select>
@@ -801,33 +844,31 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="row"> <span class="number">3</span>
+              <div class="custom-select">
+                <select>
+                  <option>Select an Issue?</option>
+                </select>
               </div>
-                    </div>
-            </li>
-            <li>
-                 <div>
-                     <div class="row">
-                     <span class="number">3</span>
-                     <div class="custom-select">
-                        <select>
-                          <option>Select an Issue?</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row mrgTop20 padLeft50">
-                        <textarea class="form-control" rows="3" placeholder="Additional comments here." id="example10"></textarea>
-                      </div>
-                      <div class="row mrgTop10 issue padLeft50 maxWidth400">
-                        <div class="custom-upload">
-                          <input type="file">
-                          <div class="fake-file"> Image Upload </div>
-                        </div>
-                        <a href="popUp/non-conformance-submission-complete-popUp.html" class="btn-primary btn-large pull-right ajax" id="btnCalander">SUBMIT</a>
-                      </div>
-                 </div>
-            </li>
-         </ul>
-     </section> 
+            </div>
+            <div class="row mrgTop20 padLeft50">
+              <textarea class="form-control" rows="3" placeholder="Additional comments here." id="example10"></textarea>
+            </div>
+            <div class="row mrgTop10 issue padLeft50 maxWidth400">
+              <div class="custom-upload">
+                <input type="file">
+                <div class="fake-file"> Image Upload </div>
+              </div>
+              <a href="popUp/non-conformance-submission-complete-popUp.html" class="btn-primary btn-large pull-right ajax" id="btnCalander">SUBMIT</a> </div>
+          </div>
+        </li>
+      </ul>
+    </section>
   </div>
 </div>
 <!--Mobile Section End --> 
@@ -843,6 +884,5 @@
 
 <!-- Custom js always after from all js --> 
 <script type="text/javascript" src="js/custom.js"></script>
-
 </body>
 </html>

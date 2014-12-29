@@ -1,0 +1,83 @@
+<script type="text/javascript">
+jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+	//alert('scfv');
+	jQuery('body').css({'overflow' :'auto'});
+});
+jQuery(window).on("resize", function(){
+jQuery.fn.colorbox.resize({       
+	width: "100%"
+	});
+	
+});
+
+$(document).ready(function(e) {
+	$('.scroll-pane').jScrollPane({autoReinitialise:true});
+});
+
+</script>
+
+<div class="financial-popup row">
+  <div class="row top-header">
+    <p class="fnt-29">Debit Statement</p>
+    <h3><span class="semiBold">11.08.14</span><small class="fnt-23">Generation No. 7171</small></h3>
+  </div>
+  <div class="row popup-content">
+    <div class="row">
+      <div class="pull-left"><a class="download" href="#">PDF</a><a class="download" href="#">CSV</a></div>
+      <a href="#" class="pull-right">HAVE AN ISSUE?</a></div>
+    <div class="row debit-detail">
+      <table width="100%">
+        <tr>
+          <th>Invoice Date</th>
+          <th>Document Ref</th>
+          <th>Discount Amount</th>
+          <th>Amount Payable</th>
+          <th>Payment Due</th>
+        </tr>
+      </table>
+    </div>
+    <div class="row debit-detail scroll-pane">
+      <table width="100%">
+        <tr>
+          <td>05.08.14</td>
+          <td>5961470</td>
+          <td>11.92</td>
+          <td>5831.88</td>
+          <td>15.08.14</td>
+        </tr>
+        <tr>
+          <td>07.08.14</td>
+          <td>5962618</td>
+          <td>12.76</td>
+          <td>5056.84</td>
+          <td>15.08.14</td>
+        </tr>
+        <tr>
+          <td>08.08.14</td>
+          <td>5963466</td>
+          <td>3.80</td>
+          <td>1793.00</td>
+          <td>15.08.14</td>
+        </tr>
+        <tr>
+          <td>10.08.14</td>
+          <td>5964719</td>
+          <td>11.44</td>
+          <td>4963.79</td>
+          <td>15.08.14</td>
+        </tr>
+      </table>
+    </div>
+    <div class="row debit-detail">
+      <table width="100%">
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td><span>39.92</span></td>
+          <td><span>17645.51</span></td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<script type="text/javascript">
+jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+	//alert('scfv');
+	jQuery('body').css({'overflow' :'auto'});
+});
+jQuery(window).on("resize", function(){
+jQuery.fn.colorbox.resize({       
+	width: "100%"
+	});
+	
+});
+
+$(document).ready(function(e) {
+	$('.scroll-pane').jScrollPane({autoReinitialise:true});
+});
+
+</script>
+
+<div class="financial-popup row">
+  <div class="row top-header">
+    <p class="fnt-29">Collection Note</p>
+    <h3><span class="semiBold">N963409</span><small class="fnt-23">Collection date <span class="semiBold">03.04.14</span></small></h3>
+  </div>
+  <div class="row popup-content">
+    <div class="row">
+      <div class="pull-left"><a class="download" href="#">PDF</a><a class="download" href="#">CSV</a></div>
+      <a href="#" class="pull-right">HAVE AN ISSUE?</a></div>
+    <div class="row collection-detail  debit-detail ">
+      <table width="100%">
+        <tr>
+          <th>Item</th>
+          <th>Description / Qty</th>
+          <th>Quantity</th>
+        </tr>
+      </table>
+    </div>
+    <div class="row collection-detail  debit-detail scroll-pane">
+      <table width="100%">
+        <tr>
+          <td>00494438</td>
+          <td>(-1) Buns-Quarter (60 IND)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>00494425</td>
+          <td>(-2) Lettuce SHRD-N.Way (12 KG)</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>00523567</td>
+          <td>(-1) Box-HM HTTYD (300 IND)</td>
+          <td>1</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

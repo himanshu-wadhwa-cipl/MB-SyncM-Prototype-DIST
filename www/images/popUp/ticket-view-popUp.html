@@ -1,0 +1,76 @@
+<script>
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+		//alert('scfv');
+		jQuery('body').css({'overflow' :'auto'});
+	});
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+</script>
+
+<div class="popUp-darkBlue row nc-ticket-view">
+  <div class="orderView">
+    <ul class="horizontal-only">
+      <li>
+        <div class="panel-small">
+          <p class="row fnt-12 clr-grey1">Type</p>
+          <div class="row fnt-29 clr-white semiBold"> Product </div>
+        </div>
+      </li>
+      <li>
+        <div class="panel-small">
+          <p class="row fnt-12 clr-grey1">02.08.14</p>
+          <div class="row fnt-29 clr-white semiBold"> KIM 576 </div>
+        </div>
+        <div class="panel-large">
+          <ul class="order-view-Status">
+            <li class="circle-yellow"> <small class="fnt-10">Status</small>
+              <hr />
+              <p class="fnt-15">Ticket not read yet. <span class="fnt-12 clr-warning">BEEN 4 HOURS?</span></p>
+            </li>
+            <li class="circle">
+              <hr />
+            </li>
+            <li class="circle">
+              <hr/>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="row non-conformance-ticket">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><span>Date submitted</span> <span >02.08.14</span> 02:46pm</td>
+        <td><span>WRIN</span> <span>097345</span></td>
+        <td><span>Product</span> <span>01242144</span> Chicken Nuggets - Legend</td>
+        <td><span>Production code</span> <span>MK6 183 07:26</span></td>
+        <td><span>Issue</span> <span>04</span>Black marks</td>
+      </tr>
+      <tr>
+        <td><span>Delivery date</span> <span>21.07.14</span></td>
+        <td><span>Use by</span> <span>14.08.14</span></td>
+        <td><span>Quantity</span> <span>1 box</span></td>
+        <td><span>Photos</span> <span> (3) View</span></td>
+        <td><span>Status</span> <span>Open</span>02.08.14 <small class="fnt-14">02:46pm <a href="javascript:avoid(0);" class="clr-warning">CLOSE IT?</a></small></td>
+      </tr>
+    </table>
+  </div>
+  <div class="row analysis-request-status mrgTop20">
+    <textarea class="form-control" rows="3" placeholder="Add addtional comments here"></textarea>
+    <div class="pull-left">
+      <div class="row img-upload">
+        <div class="custom-upload">
+          <input type="file">
+          <div class="fake-file"> Image upload </div>
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit" class="btn-primary btn-medium">ADD COMMENT</button>
+      </div>
+    </div>
+  </div>
+</div>

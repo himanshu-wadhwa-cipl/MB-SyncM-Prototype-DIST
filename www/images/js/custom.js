@@ -828,7 +828,7 @@
        		if($('.overlay-box').is(':hidden')) { 					
 						$('.overlay-box').fadeIn();
 						$(this).parents('section').find('.download-selected').css({'position':'relative', 'z-index':101})
-						$(this).parents('section').find('.icheckbox_square-blue').css({'position':'relative', 'z-index':'101'});					
+						$(this).parents('section').find('.icheckbox_square-blue').css({'position':'relative', 'z-index':101});					
 				} else if($('.overlay-box').is(':visible') && !$('section .iCheck-helper').parent().hasClass('checked')) {
 					$('.overlay-box').fadeOut();
 					$(this).parents('section').find('.download-selected').css('z-index','');
@@ -957,13 +957,6 @@ $(window).load(function(){
 	//Custom Select Scroll Function Start Here
 	$('.select .options').jScrollPane({autoReinitialise:true});
 	//Custom Select Scroll Function End Here
-	$('.financial-table .iCheck-helper').each(function() {
-        if($(this).parent().hasClass('checked')){
-		$(this).click();		
-	}
-		
-    });
-	
 });
 
 //Getting URL Parameters 

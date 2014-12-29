@@ -1,0 +1,26 @@
+<script>
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+		//alert('scfv');
+		jQuery('body').css({'overflow' :'auto'});
+	});
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+</script>
+
+<div class="popUp-Blue ticketClosed row">
+    <h2 class="semiBold">Submission complete.</h2>
+    <p>Expect and email confirmation shortly.</p>
+    <div  class="popUp-Blue-detail">
+        <small>Order. 7281172 12:34pm 06.0814</small>
+        <div class="row issueRow">
+            <div class="pull-left">
+                <p class="fnt-14 popUpIssue">Service<br>
+                    <span class="semiBold">Bad delivery </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

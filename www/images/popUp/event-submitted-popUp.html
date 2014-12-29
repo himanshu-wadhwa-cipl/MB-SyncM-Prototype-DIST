@@ -1,0 +1,20 @@
+<script>
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+		//alert('scfv');
+		jQuery('body').css({'overflow' :'auto'});
+	});
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+</script>
+
+<div class="popUp-Blue row">
+    <h2 class="semiBold">Event submitted.</h2>
+    <p>Expect a confirmation email shortly.</p>
+    <div  class="popUp-Blue-detail">
+        <small>01.08.14. 12.34.pm</small>
+        <p>Triple Double is two for one today 01.08.14<br>though 08.04.14, Plan for stock increase.</p>
+    </div>
+</div>

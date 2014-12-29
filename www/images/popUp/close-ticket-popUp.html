@@ -1,0 +1,110 @@
+<script>
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+		//alert('scfv');
+		jQuery('body').css({'overflow' :'auto'});
+	});
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+    
+    $(function(){
+        
+        //PopUp Close event fire
+        $('.closeTicket').click(function(){
+            $.colorbox({width:"100%", height:"auto",  href:"popUp/ticket-closed-popUp.html"});
+        });
+        
+        
+        $('.popUp-closeTicket select').each(function () {
+			// Cache the number of options
+			var $this = $(this),
+				numberOfOptions = $(this).children('option').length;
+		
+			// Hides the select element
+			$this.addClass('s-hidden');
+		
+			// Wrap the select element in a div
+			$this.wrap('<div class="select"></div>');
+		
+			// Insert a styled div to sit over the top of the hidden select element
+			$this.after('<div class="styledSelect"></div>');
+		
+			// Cache the styled div
+			var $styledSelect = $this.next('div.styledSelect');
+		
+			// Show the first select option in the styled div
+			$styledSelect.text($this.children('option').eq(0).text());
+		
+			// Insert an unordered list after the styled div and also cache the list
+			var $list = $('<ul />', {
+				'class': 'options'
+			}).insertAfter($styledSelect);
+		
+			// Insert a list item into the unordered list for each select option
+			for (var i = 0; i < numberOfOptions; i++) {
+				$('<li />', {
+					text: $this.children('option').eq(i).text(),
+					rel: $this.children('option').eq(i).val()
+				}).appendTo($list);
+			}
+		
+			// Cache the list items
+			var $listItems = $list.children('li');
+		
+			// Show the unordered list when the styled div is clicked (also hides it if the div is clicked again)
+			$styledSelect.click(function (e) {
+				e.stopPropagation();
+				$('div.styledSelect.active').each(function () {
+					$(this).removeClass('active').next('ul.options').hide();
+				});
+				$(this).toggleClass('active').next('ul.options').toggle();
+			});
+		
+			// Hides the unordered list when a list item is clicked and updates the styled div to show the selected list item
+			// Updates the select element to have the value of the equivalent option
+			$listItems.click(function (e) {
+				e.stopPropagation();
+				$styledSelect.text($(this).text()).removeClass('active');
+				$this.val($(this).attr('rel'));
+				$list.hide();
+				/* alert($this.val()); Uncomment this for demonstration! */
+			});
+		
+			// Hides the unordered list when clicking outside of it
+			$(document).click(function () {
+				$styledSelect.removeClass('active');
+				$list.hide();
+			});
+		
+			});
+    });
+	
+$(document).ready(function(){
+	$('.select .options').jScrollPane({autoReinitialise:true});
+});	
+</script>
+
+<div class="popUp-closeTicket row">
+  <h1 class="semiBold">Close ticket KIM 576?</h1>
+  <p>Once a ticket is closed, it cannot be reopened.</p>
+  <div class="row custom-select">
+    <select name="" id="">
+      <option value="">Select a reason</option>
+      <option value="">My bad</option>
+      <option value="">You guys fixed it</option>
+      <option value="">I fixed it</option>
+      <option value="">Someone else fixed it</option>
+      <option value="">other</option>
+    </select>
+  </div>
+  <div class="row issueRow">
+    <div class="pull-left">
+      <p class="fnt-10 semiBold"><span class="clr-primary text-regular">Product.</span> KIM 576 12:34pm 03.08.14</p>
+      <p class="fnt-14 popUpIssue">Issue 04<br>
+        <span class="semiBold">Black Marks</span> </p>
+    </div>
+    <div class="pull-right"> <a href="javascript:;" class="semiBold btn">CANCEL</a> <a href="javascript:;" onclick="$('#cboxClose')" class="semiBold btn btn-blue closeTicket">CLOSE TICKET</a> </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<script>
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+		//alert('scfv');
+		jQuery('body').css({'overflow' :'auto'});
+	});
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+</script>
+
+<div class="popUp-Blue row collectionScheduled">
+    <h2 class="semiBold">Collection scheduled</h2>
+    <p>Expect a confirmation email shortly.</p>
+    <div  class="popUp-Blue-detail">
+        <div class="row issueRow">
+                <p class="fnt-14 popUpIssue">082857 CHKN LEGEND PATTY (300) QTY 2<br>
+                Pickup <span class="semiBold">03.03.14</span>
+                </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<script>
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+		//alert('scfv');
+		jQuery('body').css({'overflow' :'auto'});
+	});
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+	$( document ).ready(function() {
+	
+$('.custom-upload input[type=file]').change(function(){
+    $(this).next().text($(this).val());
+});	
+});	
+</script>
+
+<div class="popUp-statusRequest row">
+    <div class="row analysis-status-Top">
+        <ul class="order-view-Status">
+            <li class="circle-checked">
+                <span>02.08.14</span>
+                <hr>
+                <p>Request made</p>
+            </li>
+            <li class="circle-checked">
+                <span>03.08.14</span>
+                <hr>
+                <p>Request received</p>
+            </li>
+            <li class="circle-checked">
+                <span>09.08.14</span>
+                <hr>
+                <p>Analysis scheduled</p>
+                <a href="javascript:;" class="btnCancel clr-danger pull-right semiBold">CANCEL IT?</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <h2><span class="semiBold">TAR 576</span> Analysis Request Status</h2>
+        <hr />
+        <ul class="analysis-status-list">
+            <li>
+                <p>Date submitted</p>
+                <h4 class="semiBold">02.08.14</h4>
+                <span class="semiBold">02:46pm</span>
+            </li>
+            <li>
+                <p>Type</p>
+                <h4 class="semiBold">All Rooms</h4>
+            </li>
+            <li>
+                <p>Analysis date</p>
+                <h4 class="semiBold">09.08.14</h4>
+            </li>
+        </ul>
+        <hr />
+        
+    </div>
+    <div class="row mrgTop10"><a href="javascript:void(0);" class="clr-danger fnt-14 pull-right">CANCEL OR RESCHEDULE?</a></div>
+    <div class="row analysis-request-status mrgTop10"><textarea class="form-control" rows="3" placeholder="Add addtional comments here"></textarea><div class="pull-left">
+        <div class="row img-upload">
+          <div class="custom-upload">
+            <input type="file">
+            <div class="fake-file">
+              Image upload
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <button type="submit" class="btn-primary btn-medium">ADD COMMENT</button>
+        </div>
+      </div></div>
+
+</div>

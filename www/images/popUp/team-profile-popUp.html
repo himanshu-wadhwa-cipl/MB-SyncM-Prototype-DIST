@@ -1,0 +1,28 @@
+<script>
+	jQuery('#cboxOverlay, #cboxClose, #sb_close').click(function(){
+		//alert('scfv');
+		jQuery('body').css({'overflow' :'auto'});
+	});
+	jQuery(window).on("resize", function(){
+    jQuery.fn.colorbox.resize({       
+        width: "100%"
+		});
+	});
+</script>
+
+<div class="popUp-white row teamProfile">
+    <div class="pull-left imgContetn">
+        <img src="images/pop-andy.jpg" height="289px" class="img-responsive" alt="Darly " />
+    </div>
+    <div class="pull-left teamDescription">
+        <h2 class="semiBold mrgBottom5">Andy Scanion </h2>
+        <p class="fnt-20 mrgBottom15">Your planner and much more.</p>
+        <p class="fnt-14">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <ul class="teamContactDetails">
+            <li>Email: <a class="clr-primary" href="mailto:AScanino@martinbrower.com">AScanino@martinbrower.com</a></li>
+            <li>Phone: <a class="clr-primary" href="tel:(646) 761-2148">(646) 761-2148</a></li>
+            <li>Fax: <span class="clr-primary">(646) 761-2147</span></li>
+        </ul>
+    </div>
+</div>

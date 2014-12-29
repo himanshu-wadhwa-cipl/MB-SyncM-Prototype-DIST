@@ -71,9 +71,6 @@
 	.calender_form{width:41.576%;}
 	.calender_box{width:57.819%;}
     .request-tradis-allrooms .form-control{width:200px;}
-	.financial-table table td:first-child, .financial-table  tr th:first-child{width:5%;}
-	.credit-table table td:first-child, .credit-table  tr th:first-child{width:18%;)
-}
 }
 
 @media (max-width:1024px){
@@ -84,7 +81,7 @@
 	.non-conformance, .ticketList-wrapper .horizontal-only,.frontView{width:1024px; margin-bottom:0;}
     .nonConformance .ticketList-wrapper .horizontal-only{padding-top: 10px;}
  .planDownload{margin-bottom: 20px}
- .financial-detail .tabs li a{font-size: 29px !important; padding: 20px 15px}
+    .financial-detail .tabs li a{font-size: 29px !important; padding: 20px 15px}
     .financial-table table td .download, .financial-popup .download:first-child{margin-bottom:10px;}
 .financial-table table td .download, .financial-popup .download{width:32px; height:32px; line-height:32px;}
 .veiwLink{padding-bottom: 40px;}
@@ -95,7 +92,6 @@
 .track-order-delivered{right:20px;}
 .track-order-arrives{right:20%;} 
 .line5{right:112px;}
-.financial-detail .imgLeft, .financial-detail .imgRight{width:40%;}
 }
 
 @media (max-width: 980px) {
@@ -157,7 +153,7 @@
     .non-conformance > li:last-child > div .custom-select .styledSelect:after{right: -15px;}
     .non-conformance > li:nth-child(2n) > div .date-time .date .select{width: 145px;}
     .non-conformance > li:nth-child(2n) > div .custom-select .select{font-size: 15px;}
-    
+    .financial-detail .tabs li a{font-size: 35px}
 }
 @media (max-width: 1225px) {
 	#calendarcontent{padding:0 30px; overflow:hidden;}
