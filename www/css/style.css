@@ -995,7 +995,7 @@ h2{color: #0099ff; font-size: 45px; line-height: 50px;}
 .custom-upload {position:relative; height:16px; display:inline-block;}
 .custom-upload input[type=file] {outline:none; position:absolute; left:0; top:0; text-align:right; -moz-opacity:0;  filter:alpha(opacity: 0);
 opacity: 0; z-index: 2;  height:100%; width:100%; cursor:pointer;}
-.custom-upload .fake-file {background:url(../images/imgupload-icon.png) 0 0 no-repeat; padding:0 0 0 28px; z-index:1; line-height:100%; width:100%; font-size:12px; color:#3d4a69; height:16px; line-height:16px;}
+.custom-upload .fake-file {background:url(../images/imgupload-icon.png) 0 0 no-repeat; padding:0 0 0 28px; z-index:1; line-height:100%; width:100%; font-size:12px; color:#3d4a69; height:16px; line-height:16px; display:inline-block;}
 
 
 /*Non Conformance*/
@@ -1019,7 +1019,10 @@ opacity: 0; z-index: 2;  height:100%; width:100%; cursor:pointer;}
 .non-conformance > li:last-child > div .custom-select .styledSelect:after,.nonConformance-list > li:last-child > div .custom-select .styledSelect:after{background:url(../images/icon-sprit.png) no-repeat -53px -1130px; width:15px; height:8px; right:-5px; top:8px; }
 .non-conformance > li:last-child .form-control,.nonConformance-list > li:last-child .form-control{ width:100%; height:147px; border:0; background:#394a76; padding:10px; color:#fff; resize:none; margin:10px 0 0 0; }
 .non-conformance > li:last-child .issue .custom-upload .fake-file,.nonConformance-list > li:last-child .issue .custom-upload .fake-file, .ticket-view .custom-upload .fake-file{color:#697696; font-size:8px; line-height:22px;}
+.non-conformance > li:last-child .photo-added{display:inline-block; margin:5px 0 0 0; color:#8892ac; line-height:27px;}
+.non-conformance > li:last-child .photo-added>img{border:#000 solid 1px; float:left;}
 
+.drop-files{background:#868fa5; padding:10px 10px 30px;}
 /****Non Conformance Dm**/
 
 .ticketList-wrapper{background-color: rgba(20, 49, 111, 0.26); background: url(../images/bg-non-conformance.jpg) no-repeat scroll center right; background-size: cover; min-height: 690px}

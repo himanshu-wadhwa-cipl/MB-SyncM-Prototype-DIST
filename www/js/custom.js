@@ -173,6 +173,14 @@
             if($('.datapickerajax').length){
 				$(".datapickerajax").colorbox({width:"700"});
 			}
+			if($('.dragdropajax').length){
+				$(".dragdropajax").colorbox({width:"700"});
+				$('.dragdropajax').colorbox({onLoad: function() {
+    				$('#cboxClose').remove();
+				}});
+				
+			}
+			
             if($('.orderSubmitted').length){
 				$(".orderSubmitted").colorbox({width:"100%", height:"270px"});
 			}
@@ -637,7 +645,7 @@
 				});
 				// Setting Custom Select Dropdown Height 
 				if($('.options>li').length>2){
-					$('.options').css('height','100px')
+					$('.options').css('max-height','100px')
 				}
 				
 				});
