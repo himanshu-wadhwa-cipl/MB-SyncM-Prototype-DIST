@@ -337,7 +337,7 @@ span.small{ font-size:12px; vertical-align:text-bottom; color:#eaeaea}
 .order-view-Status li > hr.top41{top:41% !important;}
 .order-view-Status li > img{position:absolute; top:-8px}
 
-.veiwLink{float:right; font-size:15px; margin-right:10px; position:relative; width:120px; text-align:left; clear:both; padding-bottom:10px}
+.veiwLink{float:right; /*font-size:15px; width:120px;*/ font-size:19px; width:140px; margin-right:10px; position:relative;  text-align:left; clear:both; padding-bottom:10px}
 .veiwLink a{text-decoration:none;}
 .veiwLink a.current{display:block; padding:0 10px; line-height:22px; position:relative;  color:#9a9a9a;}
 .veiwLink a.current:after{content:''; width:10px; height:8px; position:absolute; top:7px; right:0; background:url(../images/sprite.png) -508px -2px no-repeat}
@@ -1387,3 +1387,15 @@ opacity: 0; z-index: 2;  height:100%; width:100%; cursor:pointer;}
 #message-reply-wrapper .msg-main-header{margin-bottom:35px;}
 /*  ==========  Message Center End here  ==========  */
 
+/*Added By Prashant saxena*/
+.forecast {
+    background:none !important;
+    }
+.line-bartxt{position: absolute;
+bottom: 41px;
+left: 66px;
+font-size: 10px;
+line-height: 14px;}
+.line-bartxt ul li{ background:url(../images/linear-charttext.png) no-repeat; padding-left:15px; }
+.line-bartxt ul li:nth-child(1){ background-position:0% 0%; color:#556783;}
+.line-bartxt ul li:nth-child(2){ background-position:0% 127%; color:#9ea3b0;}

@@ -49,7 +49,7 @@
                 <div><span class="smallText">Status:</span> Delivered + Processed</div>
               </div>
               <div class="messageSlider-Content-panel clr-blue">
-                <div><span class="smallText">We need a </span> Stock Recount<span class="smallText"> on</span></div>
+                <div><span class="smallText">We need a on</span> Stock Recount<span class="smallText"> on</span></div>
                 <div class="largeText semiBold">20007</div>
                 <div><span class="smallText semiBold">Chicken Patty</span></div>
               </div>
@@ -359,7 +359,6 @@
     <!-- Blue Strip End--> 
     <!-- Event Slider -->
     <div class="eventSlider" id="eventSlider">
-    
       <div class="event-panel">
         <div class="row-top">
           <div class="row">
@@ -377,7 +376,6 @@
           <span class="clr-danger fnt-11">Event</span>
           <p>Local school football match. <span class="semiBold">Plan for stock increase.</span></p>
         </div>
-        
          </div>
       <div class="event-panel">
         <div class="row-top">
@@ -577,21 +575,10 @@
           <p>School event days 11:00-16:00 at Grant Park. <span class="semiBold">Plan for stock increase.</span></p>
         </div>
          </div>
-       
-         <div id="container" class="forecast" style="min-width:9999px;  height: 400px; margin: 0 auto;"></div>
-         
-         
     </div>
     <!-- Event Slider End --> 
     <!-- Forecast Start here -->
-    <div class="forecast">
-    <div class="line-bartxt">
-    <ul>
-    <li>LY ACTUAL</li>
-    <li>TY FORECAST</li>
-    </ul>
-    </div>
-    </div>
+    <div class="forecast">dsfaads</div>
     <!-- Forecast End here -->  
  </section>
   <div class="clearfix"></div>
@@ -614,6 +601,7 @@
             <div class="custom-select row">
               <div class="row collectionType">
                 <select>
+                  <option>Collection Type</option>
                   <option>Packaging Collection</option>
                   <option>Product Collection</option>
                 </select>
@@ -663,7 +651,7 @@
                   </div>
                   <a href="javascript:;" class="btnSubmitCollection btn-blue btn-radius10 btn-paddding10 fnt-20 semiBold  disIn-Block pull-right">SUBMIT FOR COLLECTION</a> </div>
               </div>
-              <div class="packagingCollection product-collection" style="display:block;">
+              <div class="packagingCollection product-collection">
                 <div class="row product-row mrgBottom15">
                   <div class="pull-left mwrin wrin pwrin">
                     <label class="fnt-17">WRIN</label>
@@ -744,7 +732,7 @@
             <ul class="myTeamList">
               <li> <img src="images/andy-scanion.jpg" class="img-responsive" alt="Daryl" />
                 <div class="teamDetail"> <span>Your Planner</span>
-                  <h4 class="semiBold">Andy Scanlon’s</h4>
+                  <h4 class="semiBold">Andy Scanion </h4>
                   <p>Sr. Planner MartinBrower</p>
                   <a href="popUp/team-profile-popUp.html" class="semiBold ajax">Learn More</a> <a href="javascript:;" class="semiBold">Send Daryl A Message</a> </div>
               </li>
@@ -781,11 +769,11 @@
                 <div class="letpopup">
                   <h3 class="semiBold">Contact<br>
                     Your Planner</h3>
-                  <h4 class="semiBold">Andy Scanlon’s</h4>
+                  <h4 class="semiBold">Andy Scanion</h4>
                   <span>Sr. Planner MartinBrower</span>
                   <ul class="listNumber">
                     <li><i class="icon-phone">icon Phone</i>+44(0) 7791 646416</li>
-                    <li><i class="icon-messagebox">icon Phone</i><a href="mailto:AScanion@martinbrower.com">AScanion@martinbrower.com</a></li>
+                    <li><i class="icon-messagebox">icon Phone</i><a href="mailto:AScanino@martinbrower.com">AScanino@martinbrower.com</a></li>
                   </ul>
                   <textarea class="let_comment" placeholder="Send Daryl a message right from here."></textarea>
                   <p class="disIn-Block semiBold fnt-10">Other Important Numbers</p>
@@ -887,7 +875,7 @@
                 <div class="fnt-15"><span class="smallText">Status:</span> Delivered + Processed</div>
               </div>
               <div class="messageSlider-Content-panel clr-blue stockRecountDiv">
-                <div class="fnt-11"><span class="smallText fnt-9">We need a </span> Stock Recount<span class="smallText fnt-9"> on</span></div>
+                <div class="fnt-11"><span class="smallText fnt-9">We need a on</span> Stock Recount<span class="smallText fnt-9"> on</span></div>
                 <div class="largeText semiBold">20007</div>
                 <div><span class="smallText semiBold">Chicken Patty</span></div>
               </div>
@@ -1063,73 +1051,7 @@
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script> 
 <script type="text/javascript" src="js/jquery.colorbox.js"></script> 
 <script type="text/javascript" src="js/icheck.js"></script> 
-<!--//Linear Chart Start//-->
-  <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
-    <script type="text/javascript">
-        function fn_linechartjsondata()
-        {
-            var text = [{"name": "LY ACTUAL","color": "#29334e","data": [11.0, -6.9, 6.5, -6.5, 6.4, -6.5, 6.2, -6.5, 6.3, -6.3, 6.9, -9.6]
-            },{
-                "name": "TY FORECAST",
-                "color": "#864c5c",
-                "data": [-10.0, 6.9, -6.5, 6.5, -6.4, 6.5, -6.2, 6.5, -6.3, 6.3, -6.9, 9.6]
-            }]
-            return  text;
-
-        }
-        jQuery(function () {
-           
-            var seriesData = fn_linechartjsondata();
-
-            jQuery('#container').highcharts({
-                chart: {
-                    type: 'line',
-                    margin: [280, 0, 0, -140],
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)'
-                },
-                title: {
-                    text: ''
-                },
-                subtitle: {
-                    text: ''
-                },
-                xAxis: {
-                    labels: { enabled: false },
-                    width: 4116,
-                    lineColor: 'transparent',
-                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-                },
-                yAxis: {
-                    title: { text: '' },
-                    labels: { enabled: false },
-                    gridLineWidth: 0
-                },
-                plotOptions: {
-                    line: {
-                        dataLabels: {
-                            enabled: true,
-                            color: '#9699a8'
-                        },
-                        enableMouseTracking: false
-                    }
-                },
-
-                legend: {
-                    enabled:false,
-                    align: 'left',
-                    verticalAlign: 'bottom',
-                    x:180,
-                    floating: true
-                },
-                series:seriesData
-                
-            });
-        });
-
-    </script>
-    <!--//Linear Chart Close//-->
 <!-- Custom js always after from all js --> 
 <script type="text/javascript" src="js/custom.js"></script>
 </body>
